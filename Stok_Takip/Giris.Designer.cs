@@ -57,9 +57,9 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Location = new System.Drawing.Point(107, 24);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(150, 23);
+            this.labelControl1.Size = new System.Drawing.Size(82, 23);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "KULLANICI ADI";
+            this.labelControl1.Text = "Kullanıcı";
             // 
             // labelControl2
             // 
