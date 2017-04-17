@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MayaStokModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MayaStokModelStoreContainer">
+    <EntitySet Name="HazirUrunler" EntityType="MayaStokModel.Store.HazirUrunler" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Log" EntityType="MayaStokModel.Store.Log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Musteri" EntityType="MayaStokModel.Store.Musteri" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Personel" EntityType="MayaStokModel.Store.Personel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Siparis" EntityType="MayaStokModel.Store.Siparis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SiparisDetay" EntityType="MayaStokModel.Store.SiparisDetay" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tur" EntityType="MayaStokModel.Store.Tur" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Urunler" EntityType="MayaStokModel.Store.Urunler" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Siparis_HazirUrunler" Association="MayaStokModel.Store.FK_Siparis_HazirUrunler">
+      <End Role="HazirUrunler" EntitySet="HazirUrunler" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_Musteri" Association="MayaStokModel.Store.FK_Siparis_Musteri">
+      <End Role="Musteri" EntitySet="Musteri" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_Urunler" Association="MayaStokModel.Store.FK_Siparis_Urunler">
+      <End Role="Urunler" EntitySet="Urunler" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SiparisDetay_Siparis" Association="MayaStokModel.Store.FK_SiparisDetay_Siparis">
+      <End Role="Siparis" EntitySet="Siparis" />
+      <End Role="SiparisDetay" EntitySet="SiparisDetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tur_Urunler" Association="MayaStokModel.Store.FK_Tur_Urunler">
+      <End Role="Urunler" EntitySet="Urunler" />
+      <End Role="Tur" EntitySet="Tur" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="HazirUrunler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Adi" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="cinsi" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Genislik" Type="float" Nullable="true" />
+    <Property Name="Yukseklik" Type="float" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Giris_Zamani" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Giris_Kullanici_bilgisi" Type="nvarchar" Nullable="true" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adi" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Adres" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Sehir" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="PostaKodu" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Ulke" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Telefon" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Faks" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdiSoyadi" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CepNo" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Gorev" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="K_adi" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Sifre" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="Yetki" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Siparis">
+    <Key>
+      <PropertyRef Name="SiparisID" />
+    </Key>
+    <Property Name="SiparisID" Type="int" Nullable="false" />
+    <Property Name="MusteriID" Type="int" Nullable="true" />
+    <Property Name="SiparisTarihi" Type="datetime" Nullable="true" />
+    <Property Name="TeslimTarihi" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="SiparisDetay">
+    <Key>
+      <PropertyRef Name="SiparisID" />
+    </Key>
+    <Property Name="SiparisID" Type="int" Nullable="false" />
+    <Property Name="UrunID" Type="int" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Genislik" Type="float" Nullable="true" />
+    <Property Name="Yukseklik" Type="float" Nullable="true" />
+    <Property Name="Adet" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Tur">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Adi" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Renk" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Genislik" Type="float" Nullable="true" />
+    <Property Name="yukseklik" Type="float" Nullable="true" />
+    <Property Name="Cinsi" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Rezerve" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Uretilen" Type="int" Nullable="true" />
+    <Property Name="Kalan" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Urunler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Stok_Kodu" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Stok_Adi" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Urun_Turu" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Adet" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Genislik" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Yukseklik" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Siparis_HazirUrunler">
+    <End Role="HazirUrunler" Type="MayaStokModel.Store.HazirUrunler" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Siparis" Type="MayaStokModel.Store.Siparis" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HazirUrunler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="SiparisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_Musteri">
+    <End Role="Musteri" Type="MayaStokModel.Store.Musteri" Multiplicity="1" />
+    <End Role="Siparis" Type="MayaStokModel.Store.Siparis" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="MusteriID" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="SiparisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_Urunler">
+    <End Role="Urunler" Type="MayaStokModel.Store.Urunler" Multiplicity="1" />
+    <End Role="Siparis" Type="MayaStokModel.Store.Siparis" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Urunler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="SiparisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SiparisDetay_Siparis">
+    <End Role="Siparis" Type="MayaStokModel.Store.Siparis" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SiparisDetay" Type="MayaStokModel.Store.SiparisDetay" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Siparis">
+        <PropertyRef Name="SiparisID" />
+      </Principal>
+      <Dependent Role="SiparisDetay">
+        <PropertyRef Name="SiparisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tur_Urunler">
+    <End Role="Urunler" Type="MayaStokModel.Store.Urunler" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Tur" Type="MayaStokModel.Store.Tur" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Urunler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tur">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MayaStokModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HazirUrunler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cinsi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Genislik" Type="Double" />
+          <Property Name="Yukseklik" Type="Double" />
+          <NavigationProperty Name="Siparis" Relationship="Self.FK_Siparis_HazirUrunler" FromRole="HazirUrunler" ToRole="Siparis" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Giris_Zamani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Giris_Kullanici_bilgisi" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Musteri">
+          <Key>
+            <PropertyRef Name="MusteriID" />
+          </Key>
+          <Property Name="MusteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sehir" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostaKodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ulke" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Faks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Siparis" Relationship="Self.FK_Siparis_Musteri" FromRole="Musteri" ToRole="Siparis" />
+        </EntityType>
+        <EntityType Name="Personel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdiSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CepNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gorev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="K_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sifre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Yetki" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Siparis">
+          <Key>
+            <PropertyRef Name="SiparisID" />
+          </Key>
+          <Property Name="SiparisID" Type="Int32" Nullable="false" />
+          <Property Name="MusteriID" Type="Int32" />
+          <Property Name="SiparisTarihi" Type="DateTime" Precision="7" />
+          <Property Name="TeslimTarihi" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="HazirUrunler" Relationship="Self.FK_Siparis_HazirUrunler" FromRole="Siparis" ToRole="HazirUrunler" />
+          <NavigationProperty Name="Musteri" Relationship="Self.FK_Siparis_Musteri" FromRole="Siparis" ToRole="Musteri" />
+          <NavigationProperty Name="Urunler" Relationship="Self.FK_Siparis_Urunler" FromRole="Siparis" ToRole="Urunler" />
+          <NavigationProperty Name="SiparisDetay" Relationship="Self.FK_SiparisDetay_Siparis" FromRole="Siparis" ToRole="SiparisDetay" />
+        </EntityType>
+        <EntityType Name="SiparisDetay">
+          <Key>
+            <PropertyRef Name="SiparisID" />
+          </Key>
+          <Property Name="SiparisID" Type="Int32" Nullable="false" />
+          <Property Name="UrunID" Type="Int32" Nullable="false" />
+          <Property Name="UrunAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Genislik" Type="Double" />
+          <Property Name="Yukseklik" Type="Double" />
+          <Property Name="Adet" Type="Int32" />
+          <NavigationProperty Name="Siparis" Relationship="Self.FK_SiparisDetay_Siparis" FromRole="SiparisDetay" ToRole="Siparis" />
+        </EntityType>
+        <EntityType Name="Tur">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Renk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Genislik" Type="Double" />
+          <Property Name="yukseklik" Type="Double" />
+          <Property Name="Cinsi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rezerve" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Uretilen" Type="Int32" />
+          <Property Name="Kalan" Type="Int32" />
+          <NavigationProperty Name="Urunler" Relationship="Self.FK_Tur_Urunler" FromRole="Tur" ToRole="Urunler" />
+        </EntityType>
+        <EntityType Name="Urunler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Stok_Kodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Stok_Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Urun_Turu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Genislik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Yukseklik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Siparis" Relationship="Self.FK_Siparis_Urunler" FromRole="Urunler" ToRole="Siparis" />
+          <NavigationProperty Name="Tur" Relationship="Self.FK_Tur_Urunler" FromRole="Urunler" ToRole="Tur" />
+        </EntityType>
+        <Association Name="FK_Siparis_HazirUrunler">
+          <End Role="HazirUrunler" Type="Self.HazirUrunler" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Siparis" Type="Self.Siparis" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="HazirUrunler">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Siparis">
+              <PropertyRef Name="SiparisID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Siparis_Musteri">
+          <End Role="Musteri" Type="Self.Musteri" Multiplicity="1" />
+          <End Role="Siparis" Type="Self.Siparis" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Musteri">
+              <PropertyRef Name="MusteriID" />
+            </Principal>
+            <Dependent Role="Siparis">
+              <PropertyRef Name="SiparisID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Siparis_Urunler">
+          <End Role="Urunler" Type="Self.Urunler" Multiplicity="1" />
+          <End Role="Siparis" Type="Self.Siparis" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Urunler">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Siparis">
+              <PropertyRef Name="SiparisID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SiparisDetay_Siparis">
+          <End Role="Siparis" Type="Self.Siparis" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SiparisDetay" Type="Self.SiparisDetay" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Siparis">
+              <PropertyRef Name="SiparisID" />
+            </Principal>
+            <Dependent Role="SiparisDetay">
+              <PropertyRef Name="SiparisID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tur_Urunler">
+          <End Role="Urunler" Type="Self.Urunler" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tur" Type="Self.Tur" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Urunler">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Tur">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MayaStokEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HazirUrunler" EntityType="Self.HazirUrunler" />
+          <EntitySet Name="Log" EntityType="Self.Log" />
+          <EntitySet Name="Musteri" EntityType="Self.Musteri" />
+          <EntitySet Name="Personel" EntityType="Self.Personel" />
+          <EntitySet Name="Siparis" EntityType="Self.Siparis" />
+          <EntitySet Name="SiparisDetay" EntityType="Self.SiparisDetay" />
+          <EntitySet Name="Tur" EntityType="Self.Tur" />
+          <EntitySet Name="Urunler" EntityType="Self.Urunler" />
+          <AssociationSet Name="FK_Siparis_HazirUrunler" Association="Self.FK_Siparis_HazirUrunler">
+            <End Role="HazirUrunler" EntitySet="HazirUrunler" />
+            <End Role="Siparis" EntitySet="Siparis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Siparis_Musteri" Association="Self.FK_Siparis_Musteri">
+            <End Role="Musteri" EntitySet="Musteri" />
+            <End Role="Siparis" EntitySet="Siparis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Siparis_Urunler" Association="Self.FK_Siparis_Urunler">
+            <End Role="Urunler" EntitySet="Urunler" />
+            <End Role="Siparis" EntitySet="Siparis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SiparisDetay_Siparis" Association="Self.FK_SiparisDetay_Siparis">
+            <End Role="Siparis" EntitySet="Siparis" />
+            <End Role="SiparisDetay" EntitySet="SiparisDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tur_Urunler" Association="Self.FK_Tur_Urunler">
+            <End Role="Urunler" EntitySet="Urunler" />
+            <End Role="Tur" EntitySet="Tur" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="Stok_Ekle">
+            <Parameter Name="Stok_Kodu" Mode="In" Type="String" />
+            <Parameter Name="Urun_Cinsi" Mode="In" Type="String" />
+            <Parameter Name="Urun_Turu" Mode="In" Type="String" />
+            <Parameter Name="Adet" Mode="In" Type="String" />
+            <Parameter Name="Genislik" Mode="In" Type="String" />
+            <Parameter Name="Yukseklik" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MayaStokModelStoreContainer" CdmEntityContainer="MayaStokEntities">
+    <EntitySetMapping Name="HazirUrunler">
+      <EntityTypeMapping TypeName="IsTypeOf(MayaStokModel.HazirUrunler)">
+        <MappingFragment StoreEntitySet="HazirUrunler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="cinsi" ColumnName="cinsi" />
+          <ScalarProperty Name="Genislik" ColumnName="Genislik" />
+          <ScalarProperty Name="Yukseklik" ColumnName="Yukseklik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log">
+      <EntityTypeMapping TypeName="IsTypeOf(MayaStokModel.Log)">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Giris_Zamani" ColumnName="Giris_Zamani" />
+          <ScalarProperty Name="Giris_Kullanici_bilgisi" ColumnName="Giris_Kullanici_bilgisi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Musteri">
+      <EntityTypeMapping TypeName="IsTypeOf(MayaStokModel.Musteri)">
+        <MappingFragment StoreEntitySet="Musteri">
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Sehir" ColumnName="Sehir" />
+          <ScalarProperty Name="PostaKodu" ColumnName="PostaKodu" />
+          <ScalarProperty Name="Ulke" ColumnName="Ulke" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Faks" ColumnName="Faks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personel">
+      <EntityTypeMapping TypeName="IsTypeOf(MayaStokModel.Personel)">
+        <MappingFragment StoreEntitySet="Personel">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="AdiSoyadi" ColumnName="AdiSoyadi" />
+          <ScalarProperty Name="CepNo" ColumnName="CepNo" />
+          <ScalarProperty Name="Gorev" ColumnName="Gorev" />
+          <ScalarProperty Name="K_adi" ColumnName="K_adi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Yetki" ColumnName="Yetki" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Siparis">
+      <EntityTypeMapping TypeName="IsTypeOf(MayaStokModel.Siparis)">
+        <MappingFragment StoreEntitySet="Siparis">
+          <ScalarProperty Name="SiparisID" ColumnName="SiparisID" />
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="SiparisTarihi" ColumnName="SiparisTarihi" />
+          <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiparisDetay">
+      <EntityTypeMapping TypeName="IsTypeOf(MayaStokModel.SiparisDetay)">
+        <MappingFragment StoreEntitySet="SiparisDetay">
+          <ScalarProperty Name="SiparisID" ColumnName="SiparisID" />
+          <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+          <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+          <ScalarProperty Name="Genislik" ColumnName="Genislik" />
+          <ScalarProperty Name="Yukseklik" ColumnName="Yukseklik" />
+          <ScalarProperty Name="Adet" ColumnName="Adet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tur">
+      <EntityTypeMapping TypeName="IsTypeOf(MayaStokModel.Tur)">
+        <MappingFragment StoreEntitySet="Tur">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Renk" ColumnName="Renk" />
+          <ScalarProperty Name="Genislik" ColumnName="Genislik" />
+          <ScalarProperty Name="yukseklik" ColumnName="yukseklik" />
+          <ScalarProperty Name="Cinsi" ColumnName="Cinsi" />
+          <ScalarProperty Name="Rezerve" ColumnName="Rezerve" />
+          <ScalarProperty Name="Uretilen" ColumnName="Uretilen" />
+          <ScalarProperty Name="Kalan" ColumnName="Kalan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Urunler">
+      <EntityTypeMapping TypeName="IsTypeOf(MayaStokModel.Urunler)">
+        <MappingFragment StoreEntitySet="Urunler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Stok_Kodu" ColumnName="Stok_Kodu" />
+          <ScalarProperty Name="Stok_Adi" ColumnName="Stok_Adi" />
+          <ScalarProperty Name="Urun_Turu" ColumnName="Urun_Turu" />
+          <ScalarProperty Name="Adet" ColumnName="Adet" />
+          <ScalarProperty Name="Genislik" ColumnName="Genislik" />
+          <ScalarProperty Name="Yukseklik" ColumnName="Yukseklik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
