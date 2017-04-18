@@ -99,5 +99,12 @@ namespace Stok_Takip.Modul_Sttok
             txt_stok_adi.Text = "";
             txt_stok_ara.Text = "";
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            var stok3 = db.Urunler.ToList();
+            stokurun = stok3.FirstOrDefault();
+            gridControl1.DataSource = stok3;
+        }
     }
 }

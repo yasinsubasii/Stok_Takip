@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.txt_stok_adi = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
@@ -52,6 +52,7 @@
             this.btn_islem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.urunlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.urunlerTableAdapter = new Stok_Takip.MayaStokDataSetTableAdapters.UrunlerTableAdapter();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -75,6 +76,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.simpleButton1);
             this.splitContainer1.Panel1.Controls.Add(this.txt_stok_adi);
             this.splitContainer1.Panel1.Controls.Add(this.simpleButton3);
             this.splitContainer1.Panel1.Controls.Add(this.simpleButton2);
@@ -250,7 +252,7 @@
             // 
             this.btn_islem.AutoHeight = false;
             this.btn_islem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::Stok_Takip.Properties.Resources.GÜNCELLE, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "güncelle", "güncelle", null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::Stok_Takip.Properties.Resources.GÜNCELLE, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "güncelle", "güncelle", null, true)});
             this.btn_islem.Name = "btn_islem";
             this.btn_islem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btn_islem.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btn_islem_ButtonClick);
@@ -263,6 +265,16 @@
             // urunlerTableAdapter
             // 
             this.urunlerTableAdapter.ClearBeforeFill = true;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Image = global::Stok_Takip.Properties.Resources.k_giris2;
+            this.simpleButton1.Location = new System.Drawing.Point(943, 10);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(128, 39);
+            this.simpleButton1.TabIndex = 6;
+            this.simpleButton1.Text = "STOKGETİR";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // Stok_Ara
             // 
@@ -315,5 +327,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colGenislik;
         private DevExpress.XtraGrid.Columns.GridColumn colYukseklik;
         private DevExpress.XtraGrid.Columns.GridColumn gridButon;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
