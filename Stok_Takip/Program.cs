@@ -16,7 +16,7 @@ namespace Stok_Takip
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new uretim.uretim());
+            Application.Run(new Giris());
         }
     }
 }
