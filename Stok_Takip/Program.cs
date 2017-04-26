@@ -16,7 +16,7 @@ namespace Stok_Takip
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Modul_Sttok.Stok_Ara());
+            Application.Run(new uretim.uretim());
         }
     }
 }
