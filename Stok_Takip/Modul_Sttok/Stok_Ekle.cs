@@ -55,7 +55,9 @@ namespace Stok_Takip.Modul_Sttok
 
             
             cmd.ExecuteNonQuery();
-            
+            this.Hide();
+            MessageBox.Show("Kayıt yapılmıştır");
+
 
         }
     }

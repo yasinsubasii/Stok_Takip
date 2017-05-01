@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="d19c44b0531540f8abd3aebeaea4d25f" Name="Diagram1">
         <EntityTypeShape EntityType="MayaStokModel.HazirUrunler" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="MayaStokModel.Log" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayaStokModel.Log" Width="1.5" PointX="7" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MayaStokModel.Musteri" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MayaStokModel.Personel" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MayaStokModel.Siparis" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />

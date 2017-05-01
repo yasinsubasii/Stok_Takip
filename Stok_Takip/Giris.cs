@@ -52,8 +52,8 @@ namespace Stok_Takip
                 if (dt1.Rows[0][0].ToString() == "Yönetici")
                 {
                     this.Hide();
-                    MAYA my = new MAYA();
-                    my.Show();
+                    Acilis_Menu.baslangic bs = new Acilis_Menu.baslangic();
+                    bs.Show();
 
                 }
             }

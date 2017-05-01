@@ -17,9 +17,13 @@ namespace Stok_Takip
             {
                 con.Open();
 
+
             }
             return con;
 
+            
+
         }
+        
     }
 }

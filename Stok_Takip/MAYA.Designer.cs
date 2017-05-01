@@ -31,17 +31,13 @@
         {
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnStok_arama = new DevExpress.XtraBars.BarButtonItem();
-            this.btnStok_guncelle = new DevExpress.XtraBars.BarButtonItem();
             this.btnStok_ekle = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.stok = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +47,6 @@
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.btnStok_arama,
-            this.btnStok_guncelle,
             this.btnStok_ekle,
             this.barButtonItem4,
             this.barButtonItem1});
@@ -60,11 +55,8 @@
             this.ribbon.MaxItemId = 6;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.stok,
-            this.ribbonPage1,
-            this.ribbonPage2,
-            this.ribbonPage3});
-            this.ribbon.Size = new System.Drawing.Size(1153, 155);
+            this.stok});
+            this.ribbon.Size = new System.Drawing.Size(1153, 162);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnStok_arama
@@ -74,13 +66,6 @@
             this.btnStok_arama.LargeGlyph = global::Stok_Takip.Properties.Resources.ARAMA;
             this.btnStok_arama.Name = "btnStok_arama";
             this.btnStok_arama.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStok_arama_ItemClick);
-            // 
-            // btnStok_guncelle
-            // 
-            this.btnStok_guncelle.Caption = "STOKGUNCELLE";
-            this.btnStok_guncelle.Id = 2;
-            this.btnStok_guncelle.LargeGlyph = global::Stok_Takip.Properties.Resources.GÜNCELLE;
-            this.btnStok_guncelle.Name = "btnStok_guncelle";
             // 
             // btnStok_ekle
             // 
@@ -108,6 +93,7 @@
             this.stok.Appearance.Options.UseFont = true;
             this.stok.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
+            this.stok.Image = global::Stok_Takip.Properties.Resources.ARAMA;
             this.stok.Name = "stok";
             this.stok.Text = "STOK";
             // 
@@ -117,29 +103,6 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnStok_ekle);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
-            // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "ribbonPage2";
-            // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "ribbonPage3";
-            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 590);
@@ -147,6 +110,11 @@
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1153, 27);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
             // 
             // MAYA
             // 
@@ -177,14 +145,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem btnStok_arama;
-        private DevExpress.XtraBars.BarButtonItem btnStok_guncelle;
         private DevExpress.XtraBars.BarButtonItem btnStok_ekle;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
     }
     
 }
