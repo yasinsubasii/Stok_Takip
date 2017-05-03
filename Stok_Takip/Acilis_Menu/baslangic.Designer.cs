@@ -41,6 +41,7 @@
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
@@ -51,6 +52,7 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             ((System.ComponentModel.ISupportInitialize)(ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -82,10 +84,11 @@
             this.barButtonItem2,
             this.barButtonItem3,
             this.barButtonItem4,
-            this.barButtonItem5});
+            this.barButtonItem5,
+            this.barButtonItem6});
             ribbon.Location = new System.Drawing.Point(0, 0);
             ribbon.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            ribbon.MaxItemId = 15;
+            ribbon.MaxItemId = 16;
             ribbon.Name = "ribbon";
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.stok,
@@ -152,7 +155,7 @@
             // 
             // barButtonItem5
             // 
-            this.barButtonItem5.Caption = "SİPARİŞ";
+            this.barButtonItem5.Caption = "SİPARİŞ-GİRİŞ";
             this.barButtonItem5.Id = 14;
             this.barButtonItem5.LargeGlyph = global::Stok_Takip.Properties.Resources.k_giris;
             this.barButtonItem5.Name = "barButtonItem5";
@@ -191,7 +194,6 @@
             this.ribbonPageGroup2.AllowTextClipping = false;
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.ShowCaptionButton = false;
             // 
@@ -199,8 +201,17 @@
             // 
             this.ribbonPage2.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ribbonPage2.Appearance.Options.UseFont = true;
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
             this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "MESAJLAŞMA";
+            this.ribbonPage2.Text = "SİPARİŞ";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem6);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
             // ribbonPage3
             // 
@@ -244,7 +255,7 @@
             this.splitContainer3.Panel2.Controls.Add(this.k_adi);
             this.splitContainer3.Panel2.Controls.Add(this.simpleButton1);
             this.splitContainer3.Size = new System.Drawing.Size(80, 789);
-            this.splitContainer3.SplitterDistance = 87;
+            this.splitContainer3.SplitterDistance = 104;
             this.splitContainer3.TabIndex = 0;
             // 
             // pictureBox1
@@ -253,7 +264,7 @@
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 87);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 104);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -318,6 +329,13 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "SİPARİŞ-DURUM";
+            this.barButtonItem6.Id = 15;
+            this.barButtonItem6.LargeGlyph = global::Stok_Takip.Properties.Resources.GÜNCELLE;
+            this.barButtonItem6.Name = "barButtonItem6";
+            // 
             // baslangic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,5 +391,7 @@
         private DevExpress.XtraEditors.LabelControl k_adi;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
     }
 }

@@ -109,44 +109,6 @@
     <Compile Include="MAYA.Designer.cs">
       <DependentUpon>MAYA.cs</DependentUpon>
     </Compile>
-    <Compile Include="MayaStokDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MayaStokDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\HazirUrunler.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\Log.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\Musteri.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\Personel.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\Siparis.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\SiparisDetay.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Modul_Sttok\Stok_Ara.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,12 +127,6 @@
     <Compile Include="Modul_Sttok\Stok_Guncelle.Designer.cs">
       <DependentUpon>Stok_Guncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modul_Sttok\Tur.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\Urunler.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,6 +134,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="siparis.Designer.cs">
+      <DependentUpon>siparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Siparis\Siparis_İzle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Siparis\Siparis_İzle.Designer.cs">
+      <DependentUpon>Siparis_İzle.cs</DependentUpon>
+    </Compile>
     <Compile Include="uretim\uretim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +190,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="siparis.resx">
+      <DependentUpon>siparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Siparis\Siparis_İzle.resx">
+      <DependentUpon>Siparis_İzle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uretim\uretim.resx">
       <DependentUpon>uretim.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,24 +203,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Modul_Sttok\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="MayaStokDataSet.xsc">
-      <DependentUpon>MayaStokDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MayaStokDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MayaStokDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MayaStokDataSet.xss">
-      <DependentUpon>MayaStokDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Modul_Sttok\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -286,16 +242,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modul_Sttok\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Modul_Sttok\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\Text-Edit-icon.png" />
     <None Include="Resources\search-red-icon.png" />
     <None Include="Resources\kullanıcı.png" />

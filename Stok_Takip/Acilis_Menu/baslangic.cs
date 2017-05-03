@@ -49,8 +49,8 @@ namespace Stok_Takip.Acilis_Menu
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            uretim.uretim URT = new uretim.uretim();
-            URT.ShowDialog();
+            siparis sprs = new siparis();
+            sprs.ShowDialog();
         }
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace Stok_Takip.Acilis_Menu
             {
                 k_adi.Text = dr["AdiSoyadi"].ToString();
             }
-
+            bag.Close();
         }
     }
 }
