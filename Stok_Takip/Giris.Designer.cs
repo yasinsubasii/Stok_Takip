@@ -33,7 +33,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.K_adi = new DevExpress.XtraEditors.TextEdit();
             this.Sifre = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
             this.barCheckItem2 = new DevExpress.XtraBars.BarCheckItem();
@@ -44,18 +43,16 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btn_giris = new DevExpress.XtraEditors.SimpleButton();
-            this.combo_Yetki = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.K_adi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sifre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.combo_Yetki.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Location = new System.Drawing.Point(107, 24);
+            this.labelControl1.Location = new System.Drawing.Point(126, 24);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(82, 23);
             this.labelControl1.TabIndex = 0;
@@ -72,6 +69,7 @@
             // 
             // K_adi
             // 
+            this.K_adi.EditValue = "Yasin";
             this.K_adi.Location = new System.Drawing.Point(107, 62);
             this.K_adi.Name = "K_adi";
             this.K_adi.Size = new System.Drawing.Size(150, 20);
@@ -79,19 +77,11 @@
             // 
             // Sifre
             // 
+            this.Sifre.EditValue = "123456";
             this.Sifre.Location = new System.Drawing.Point(107, 146);
             this.Sifre.Name = "Sifre";
             this.Sifre.Size = new System.Drawing.Size(150, 20);
             this.Sifre.TabIndex = 3;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl3.Location = new System.Drawing.Point(143, 185);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(65, 23);
-            this.labelControl3.TabIndex = 1;
-            this.labelControl3.Text = "KANAL";
             // 
             // popupMenu1
             // 
@@ -138,28 +128,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(380, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(358, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 341);
-            this.barDockControlBottom.Size = new System.Drawing.Size(380, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 262);
+            this.barDockControlBottom.Size = new System.Drawing.Size(358, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 341);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 262);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(380, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 341);
+            this.barDockControlRight.Location = new System.Drawing.Point(358, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 262);
             // 
             // btn_giris
             // 
@@ -168,35 +158,20 @@
             this.btn_giris.Appearance.Options.UseFont = true;
             this.btn_giris.Appearance.Options.UseForeColor = true;
             this.btn_giris.Image = global::Stok_Takip.Properties.Resources.k_giris2;
-            this.btn_giris.Location = new System.Drawing.Point(21, 280);
+            this.btn_giris.Location = new System.Drawing.Point(116, 192);
             this.btn_giris.Name = "btn_giris";
             this.btn_giris.Size = new System.Drawing.Size(115, 39);
             this.btn_giris.TabIndex = 5;
             this.btn_giris.Text = "GİRİS";
             this.btn_giris.Click += new System.EventHandler(this.btn_giris_Click);
             // 
-            // combo_Yetki
-            // 
-            this.combo_Yetki.Location = new System.Drawing.Point(107, 236);
-            this.combo_Yetki.MenuManager = this.barManager1;
-            this.combo_Yetki.Name = "combo_Yetki";
-            this.combo_Yetki.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.combo_Yetki.Properties.Items.AddRange(new object[] {
-            "Depo",
-            "Yönetici"});
-            this.combo_Yetki.Size = new System.Drawing.Size(150, 20);
-            this.combo_Yetki.TabIndex = 20;
-            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 341);
-            this.Controls.Add(this.combo_Yetki);
+            this.ClientSize = new System.Drawing.Size(358, 262);
             this.Controls.Add(this.btn_giris);
             this.Controls.Add(this.Sifre);
-            this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.K_adi);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
@@ -207,11 +182,11 @@
             this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giris";
+            this.Load += new System.EventHandler(this.Giris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.K_adi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sifre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.combo_Yetki.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,7 +198,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit K_adi;
         private DevExpress.XtraEditors.TextEdit Sifre;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
@@ -234,6 +208,5 @@
         private DevExpress.XtraBars.BarCheckItem barCheckItem2;
         private DevExpress.XtraBars.BarCheckItem barCheckItem3;
         private DevExpress.XtraEditors.SimpleButton btn_giris;
-        private DevExpress.XtraEditors.ComboBoxEdit combo_Yetki;
     }
 }

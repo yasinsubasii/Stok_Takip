@@ -41,14 +41,11 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.dateTimeTeslimat = new System.Windows.Forms.DateTimePicker();
-            this.txt_siparis_id = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Müsteri_Adi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_Adi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Miktar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Genislik.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Yukseklik.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_siparis_id.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton1
@@ -150,21 +147,6 @@
             this.dateTimeTeslimat.Size = new System.Drawing.Size(200, 21);
             this.dateTimeTeslimat.TabIndex = 4;
             // 
-            // txt_siparis_id
-            // 
-            this.txt_siparis_id.Location = new System.Drawing.Point(160, 25);
-            this.txt_siparis_id.Name = "txt_siparis_id";
-            this.txt_siparis_id.Size = new System.Drawing.Size(167, 20);
-            this.txt_siparis_id.TabIndex = 1;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(55, 28);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(45, 13);
-            this.labelControl7.TabIndex = 2;
-            this.labelControl7.Text = "Siparis İD";
-            // 
             // siparis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,20 +162,18 @@
             this.Controls.Add(this.txt_Miktar);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.txt_Urun_Adi);
-            this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.txt_siparis_id);
             this.Controls.Add(this.txt_Müsteri_Adi);
             this.Controls.Add(this.simpleButton1);
             this.Name = "siparis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "siparis";
+            this.Load += new System.EventHandler(this.siparis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_Müsteri_Adi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_Adi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Miktar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Genislik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Yukseklik.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_siparis_id.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,7 +194,5 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.DateTimePicker dateTimeTeslimat;
-        private DevExpress.XtraEditors.TextEdit txt_siparis_id;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

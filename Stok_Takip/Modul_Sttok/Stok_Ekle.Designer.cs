@@ -88,7 +88,6 @@ namespace Stok_Takip.Modul_Sttok
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1005, 657);
             this.groupControl1.TabIndex = 0;
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // checkEdit1
             // 
@@ -261,6 +260,7 @@ namespace Stok_Takip.Modul_Sttok
             this.Name = "Stok_Ekle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StokEkle";
+            this.Load += new System.EventHandler(this.Stok_Ekle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

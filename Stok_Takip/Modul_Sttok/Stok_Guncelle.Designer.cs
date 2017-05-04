@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.txt_yukseklik = new DevExpress.XtraEditors.TextEdit();
             this.txtadet = new DevExpress.XtraEditors.TextEdit();
             this.txturun_adi = new DevExpress.XtraEditors.TextEdit();
@@ -40,12 +39,12 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txt_genislik = new DevExpress.XtraEditors.TextEdit();
             this.txturun_turu = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtartir = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_yukseklik.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtadet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txturun_adi.Properties)).BeginInit();
@@ -53,21 +52,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtstok_kodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_genislik.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txturun_turu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtartir.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // checkEdit1
-            // 
-            this.checkEdit1.Location = new System.Drawing.Point(416, 444);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit1.Properties.Caption = "REZERVE";
-            this.checkEdit1.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.checkEdit1.Size = new System.Drawing.Size(102, 23);
-            this.checkEdit1.TabIndex = 21;
             // 
             // txt_yukseklik
             // 
+            this.txt_yukseklik.Enabled = false;
             this.txt_yukseklik.Location = new System.Drawing.Point(295, 369);
             this.txt_yukseklik.Name = "txt_yukseklik";
             this.txt_yukseklik.Size = new System.Drawing.Size(100, 20);
@@ -75,6 +65,7 @@
             // 
             // txtadet
             // 
+            this.txtadet.Enabled = false;
             this.txtadet.Location = new System.Drawing.Point(295, 260);
             this.txtadet.Name = "txtadet";
             this.txtadet.Size = new System.Drawing.Size(168, 20);
@@ -82,6 +73,7 @@
             // 
             // txturun_adi
             // 
+            this.txturun_adi.Enabled = false;
             this.txturun_adi.Location = new System.Drawing.Point(295, 152);
             this.txturun_adi.Name = "txturun_adi";
             this.txturun_adi.Size = new System.Drawing.Size(168, 20);
@@ -96,6 +88,7 @@
             // 
             // txtstok_kodu
             // 
+            this.txtstok_kodu.Enabled = false;
             this.txtstok_kodu.Location = new System.Drawing.Point(295, 92);
             this.txtstok_kodu.Name = "txtstok_kodu";
             this.txtstok_kodu.Size = new System.Drawing.Size(168, 20);
@@ -161,20 +154,10 @@
             this.labelControl2.TabIndex = 9;
             this.labelControl2.Text = "ÜRÜN ADI";
             // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Image = global::Stok_Takip.Properties.Resources.temizle;
-            this.simpleButton3.Location = new System.Drawing.Point(319, 505);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(128, 39);
-            this.simpleButton3.TabIndex = 6;
-            this.simpleButton3.Text = "TEMİZLE";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
-            // 
             // simpleButton2
             // 
             this.simpleButton2.Image = global::Stok_Takip.Properties.Resources.GÜNCELLE;
-            this.simpleButton2.Location = new System.Drawing.Point(100, 505);
+            this.simpleButton2.Location = new System.Drawing.Point(281, 508);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(128, 39);
             this.simpleButton2.TabIndex = 5;
@@ -193,6 +176,7 @@
             // 
             // txt_genislik
             // 
+            this.txt_genislik.Enabled = false;
             this.txt_genislik.Location = new System.Drawing.Point(295, 315);
             this.txt_genislik.Name = "txt_genislik";
             this.txt_genislik.Properties.AutoHeight = false;
@@ -201,17 +185,38 @@
             // 
             // txturun_turu
             // 
+            this.txturun_turu.Enabled = false;
             this.txturun_turu.Location = new System.Drawing.Point(295, 207);
             this.txturun_turu.Name = "txturun_turu";
             this.txturun_turu.Size = new System.Drawing.Size(168, 20);
             this.txturun_turu.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(469, 263);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "+";
+            // 
+            // txtartir
+            // 
+            this.txtartir.Location = new System.Drawing.Point(490, 260);
+            this.txtartir.Name = "txtartir";
+            this.txtartir.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtartir.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtartir.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtartir.Size = new System.Drawing.Size(53, 20);
+            this.txtartir.TabIndex = 22;
             // 
             // Stok_Guncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 750);
-            this.Controls.Add(this.checkEdit1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_yukseklik);
             this.Controls.Add(this.txtadet);
             this.Controls.Add(this.txturun_adi);
@@ -224,14 +229,13 @@
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txt_genislik);
+            this.Controls.Add(this.txtartir);
             this.Name = "Stok_Guncelle";
             this.Text = "Stok_Guncelle";
             this.Load += new System.EventHandler(this.Stok_Guncelle_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_yukseklik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtadet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txturun_adi.Properties)).EndInit();
@@ -239,14 +243,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtstok_kodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_genislik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txturun_turu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtartir.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraEditors.TextEdit txt_yukseklik;
         private DevExpress.XtraEditors.TextEdit txtadet;
         private DevExpress.XtraEditors.TextEdit txturun_adi;
@@ -258,10 +261,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txt_genislik;
         private DevExpress.XtraEditors.TextEdit txturun_turu;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.SpinEdit txtartir;
     }
 }

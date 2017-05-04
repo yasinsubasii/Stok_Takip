@@ -16,6 +16,7 @@ namespace Stok_Takip.Modul_Sttok
     {
         MayaStokEntities db;
         RepositoryItemButtonEdit riButtonEdit = new RepositoryItemButtonEdit();
+        
         public Stok_Ara()
         {
             InitializeComponent();
@@ -24,9 +25,8 @@ namespace Stok_Takip.Modul_Sttok
         private void Stok_Ara_Load(object sender, EventArgs e)
         {
             stokurun = new Urunler();
-            // TODO: This line of code loads data into the 'mayaStokDataSet.Urunler' table. You can move, or remove it, as needed.
-            //this.urunlerTableAdapter.Fill(this.mayaStokDataSet.Urunler);
             db = new MayaStokEntities();
+
 
         }
         void ara()
@@ -62,7 +62,7 @@ namespace Stok_Takip.Modul_Sttok
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-
+           
             ara();
             
         }
@@ -87,7 +87,10 @@ namespace Stok_Takip.Modul_Sttok
         private void btn_islem_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             //txt_stok_ara.Text = gridView1.GetFocusedRowCellValue("id").ToString();
-            Modul_Sttok.Stok_Guncelle sg = new Modul_Sttok.Stok_Guncelle(this);
+            string row = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Stok_Kodu").ToString();
+            Urunler stok = db.Urunler.Where(w => w.Stok_Kodu == row.ToUpper()).FirstOrDefault();
+            Modul_Sttok.Stok_Guncelle sg = new Modul_Sttok.Stok_Guncelle(stok);
+            
             sg.ShowDialog(this);
 
 
@@ -102,8 +105,9 @@ namespace Stok_Takip.Modul_Sttok
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+
             var stok3 = db.Urunler.ToList();
-            stokurun = stok3.FirstOrDefault();
+                 
             gridControl1.DataSource = stok3;
         }
     }

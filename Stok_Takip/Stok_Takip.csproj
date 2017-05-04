@@ -97,17 +97,17 @@
       <DependentUpon>baslangic.cs</DependentUpon>
     </Compile>
     <Compile Include="baglanti.cs" />
+    <Compile Include="Fonksiyonlar\Rutbe.cs" />
     <Compile Include="Giris.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
-    <Compile Include="MAYA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MAYA.Designer.cs">
-      <DependentUpon>MAYA.cs</DependentUpon>
+    <Compile Include="MayaStokDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MayaStokDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Modul_Sttok\HazirUrunler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -137,9 +137,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Modul_Sttok\Siparis.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modul_Sttok\SiparisDetay.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Modul_Sttok\Stok_Ara.cs">
@@ -182,12 +179,6 @@
     <Compile Include="siparis.Designer.cs">
       <DependentUpon>siparis.cs</DependentUpon>
     </Compile>
-    <Compile Include="Siparis\Siparis_İzle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Siparis\Siparis_İzle.Designer.cs">
-      <DependentUpon>Siparis_İzle.cs</DependentUpon>
-    </Compile>
     <Compile Include="uretim\uretim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,9 +195,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MAYA.resx">
-      <DependentUpon>MAYA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Sttok\Stok_Ara.resx">
       <DependentUpon>Stok_Ara.cs</DependentUpon>
@@ -235,9 +223,6 @@
     <EmbeddedResource Include="siparis.resx">
       <DependentUpon>siparis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Siparis\Siparis_İzle.resx">
-      <DependentUpon>Siparis_İzle.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="uretim\uretim.resx">
       <DependentUpon>uretim.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +234,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="MayaStokDataSet.xsc">
+      <DependentUpon>MayaStokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MayaStokDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MayaStokDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MayaStokDataSet.xss">
+      <DependentUpon>MayaStokDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Modul_Sttok\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
@@ -276,7 +272,7 @@
     <None Include="Resources\GİRİS.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Fonksiyonlar\" />
+    <Folder Include="Siparis\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\temizle.png" />
@@ -312,7 +308,7 @@
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

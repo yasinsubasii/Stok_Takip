@@ -112,7 +112,15 @@ namespace Stok_Takip.Acilis_Menu
 
         private void baslangic_Load(object sender, EventArgs e)
         {
-            
+           if(Fonksiyonlar.Rutbe.rutbe == "Depo")
+            {
+                btnStok_ekle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+                ribbonPage1.Visible = false;
+                ribbonPage2.Visible = false;
+                ribbonPage3.Visible = false;
+            }
+
+
             SqlConnection bag = bgl.baglantim();
             SqlCommand kmt1 = new SqlCommand("select resim from Personel where Yetki='Yönetici'", bag);
             SqlCommand kmt2 = new SqlCommand("select AdiSoyadi from Personel where Yetki='Yönetici'", bag);

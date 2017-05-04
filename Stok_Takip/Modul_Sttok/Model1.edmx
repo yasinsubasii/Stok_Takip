@@ -59,19 +59,6 @@
           <Property Name="SiparisTarihi" Type="datetime2" Precision="7" />
           <Property Name="TeslimTarihi" Type="datetime2" Precision="7" />
         </EntityType>
-        <EntityType Name="SiparisDetay">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SiparisID" Type="int" />
-          <Property Name="MüsteriAdi" Type="nvarchar" MaxLength="50" />
-          <Property Name="UrunAdi" Type="nvarchar" MaxLength="50" />
-          <Property Name="Genislik" Type="float" />
-          <Property Name="Yukseklik" Type="float" />
-          <Property Name="Adet" Type="int" />
-          <Property Name="TeslimatTarihi" Type="datetime" />
-        </EntityType>
         <EntityType Name="Tur">
           <Key>
             <PropertyRef Name="id" />
@@ -182,7 +169,6 @@
           <EntitySet Name="Musteri" EntityType="Self.Musteri" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personel" EntityType="Self.Personel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Siparis" EntityType="Self.Siparis" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SiparisDetay" EntityType="Self.SiparisDetay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tur" EntityType="Self.Tur" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urunler" EntityType="Self.Urunler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Üretim_Dikim" EntityType="Self.Üretim_Dikim" Schema="dbo" store:Type="Tables" />
@@ -266,19 +252,6 @@
           <NavigationProperty Name="HazirUrunler" Relationship="Self.FK_Siparis_HazirUrunler" FromRole="Siparis" ToRole="HazirUrunler" />
           <NavigationProperty Name="Musteri" Relationship="Self.FK_Siparis_Musteri" FromRole="Siparis" ToRole="Musteri" />
           <NavigationProperty Name="Urunler" Relationship="Self.FK_Siparis_Urunler" FromRole="Siparis" ToRole="Urunler" />
-        </EntityType>
-        <EntityType Name="SiparisDetay">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SiparisID" Type="Int32" />
-          <Property Name="MüsteriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="UrunAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Genislik" Type="Double" />
-          <Property Name="Yukseklik" Type="Double" />
-          <Property Name="Adet" Type="Int32" />
-          <Property Name="TeslimatTarihi" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Tur">
           <Key>
@@ -393,7 +366,6 @@
           <EntitySet Name="Musteri" EntityType="Self.Musteri" />
           <EntitySet Name="Personel" EntityType="Self.Personel" />
           <EntitySet Name="Siparis" EntityType="Self.Siparis" />
-          <EntitySet Name="SiparisDetay" EntityType="Self.SiparisDetay" />
           <EntitySet Name="Tur" EntityType="Self.Tur" />
           <EntitySet Name="Urunler" EntityType="Self.Urunler" />
           <EntitySet Name="Üretim_Dikim" EntityType="Self.Üretim_Dikim" />
@@ -476,20 +448,6 @@
                 <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
                 <ScalarProperty Name="SiparisTarihi" ColumnName="SiparisTarihi" />
                 <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SiparisDetay">
-            <EntityTypeMapping TypeName="MayaStokModel.SiparisDetay">
-              <MappingFragment StoreEntitySet="SiparisDetay">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="SiparisID" ColumnName="SiparisID" />
-                <ScalarProperty Name="MüsteriAdi" ColumnName="MüsteriAdi" />
-                <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
-                <ScalarProperty Name="Genislik" ColumnName="Genislik" />
-                <ScalarProperty Name="Yukseklik" ColumnName="Yukseklik" />
-                <ScalarProperty Name="Adet" ColumnName="Adet" />
-                <ScalarProperty Name="TeslimatTarihi" ColumnName="TeslimatTarihi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

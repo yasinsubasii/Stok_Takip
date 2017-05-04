@@ -217,14 +217,16 @@
             // 
             // colStok_Adi
             // 
-            this.colStok_Adi.FieldName = "Stok Adi";
+            this.colStok_Adi.Caption = "Stok Adı";
+            this.colStok_Adi.FieldName = "Stok_Adi";
             this.colStok_Adi.Name = "colStok_Adi";
             this.colStok_Adi.Visible = true;
             this.colStok_Adi.VisibleIndex = 1;
             // 
             // colUrun_Turu
             // 
-            this.colUrun_Turu.FieldName = "Urun Turu";
+            this.colUrun_Turu.Caption = "Urun Turu";
+            this.colUrun_Turu.FieldName = "Urun_Turu";
             this.colUrun_Turu.Name = "colUrun_Turu";
             this.colUrun_Turu.Visible = true;
             this.colUrun_Turu.VisibleIndex = 2;

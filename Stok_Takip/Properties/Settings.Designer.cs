@@ -22,5 +22,16 @@ namespace Stok_Takip.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-TNVMV0L\\YASIN;Initial Catalog=MayaStok;Integrated Security=Tr" +
+            "ue")]
+        public string MayaStokConnectionString {
+            get {
+                return ((string)(this["MayaStokConnectionString"]));
+            }
+        }
     }
 }

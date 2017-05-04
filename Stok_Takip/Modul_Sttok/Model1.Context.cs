@@ -30,7 +30,6 @@ namespace Stok_Takip.Modul_Sttok
         public virtual DbSet<Musteri> Musteri { get; set; }
         public virtual DbSet<Personel> Personel { get; set; }
         public virtual DbSet<Siparis> Siparis { get; set; }
-        public virtual DbSet<SiparisDetay> SiparisDetay { get; set; }
         public virtual DbSet<Tur> Tur { get; set; }
         public virtual DbSet<Urunler> Urunler { get; set; }
         public virtual DbSet<Üretim_Dikim> Üretim_Dikim { get; set; }

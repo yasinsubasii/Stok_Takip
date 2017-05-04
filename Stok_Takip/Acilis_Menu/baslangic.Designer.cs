@@ -36,6 +36,7 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.stok = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -52,7 +53,6 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             ((System.ComponentModel.ISupportInitialize)(ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -161,6 +161,13 @@
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "SİPARİŞ-DURUM";
+            this.barButtonItem6.Id = 15;
+            this.barButtonItem6.LargeGlyph = global::Stok_Takip.Properties.Resources.GÜNCELLE;
+            this.barButtonItem6.Name = "barButtonItem6";
+            // 
             // stok
             // 
             this.stok.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -218,7 +225,7 @@
             this.ribbonPage3.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ribbonPage3.Appearance.Options.UseFont = true;
             this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "KULLANICILAR";
+            this.ribbonPage3.Text = "REZERVE";
             // 
             // splitContainer1
             // 
@@ -328,13 +335,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // barButtonItem6
-            // 
-            this.barButtonItem6.Caption = "SİPARİŞ-DURUM";
-            this.barButtonItem6.Id = 15;
-            this.barButtonItem6.LargeGlyph = global::Stok_Takip.Properties.Resources.GÜNCELLE;
-            this.barButtonItem6.Name = "barButtonItem6";
             // 
             // baslangic
             // 

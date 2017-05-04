@@ -19,7 +19,9 @@ namespace Stok_Takip
         {
             InitializeComponent();
         }
-        baglanti bgl = new baglanti();    
+        Modul_Sttok.MayaStokEntities db;
+        Modul_Sttok.Personel prs;
+
         
 
         private void dropDownButton1_Click(object sender, EventArgs e)
@@ -31,36 +33,35 @@ namespace Stok_Takip
 
         private void btn_giris_Click(object sender, EventArgs e)
         {
-            
-            SqlConnection con = bgl.baglantim();
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from Personel where K_adi='" + K_adi.Text + "' and Sifre='" + Sifre.Text + "' and Yetki='" + combo_Yetki.Text + "'", con);
-            DataTable dt = new DataTable();
-
-            sda.Fill(dt);
-
-            if (dt.Rows[0][0].ToString() == "1")
+            var stok = db.Personel.Where(w => w.AdiSoyadi == K_adi.Text.ToString() && w.Sifre == Sifre.Text.ToString()).ToList();
+            prs = stok.FirstOrDefault();
+            if(prs != null)
             {
-                SqlDataAdapter sda1 = new SqlDataAdapter("Select Yetki from Personel where K_adi='" + K_adi.Text + "' and Sifre='" + Sifre.Text + "'", con);
-                DataTable dt1 = new DataTable();
-
-                sda1.Fill(dt1);
-                if (dt1.Rows[0][0].ToString() == "Depo")
+                if(prs.Yetki == "Depo")
                 {
-                    this.Hide();
-                    MessageBox.Show("yapim asamasinda");
+                    Fonksiyonlar.Rutbe.rutbe = "Depo";
+                    Acilis_Menu.baslangic my = new Acilis_Menu.baslangic();
+                    my.Show();
                 }
-                if (dt1.Rows[0][0].ToString() == "Yönetici")
+                else if (prs.Yetki == "Yönetici")
                 {
-                    this.Hide();
-                    Acilis_Menu.baslangic bs = new Acilis_Menu.baslangic();
-                    bs.Show();
-
+                    Fonksiyonlar.Rutbe.rutbe = "Yönetici";
+                    Acilis_Menu.baslangic my = new Acilis_Menu.baslangic();
+                    my.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Kullanıcı adı veya şifre yanlış!!");
                 }
             }
-            else
-            {
-                MessageBox.Show("yanlıs giris");
-            }
+
+        }
+
+        private void Giris_Load(object sender, EventArgs e)
+        {
+            db = new Modul_Sttok.MayaStokEntities();
+            prs = new Modul_Sttok.Personel();
+
         }
     }
 }
