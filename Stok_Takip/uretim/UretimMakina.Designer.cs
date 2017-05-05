@@ -97,6 +97,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(128, 39);
             this.simpleButton1.TabIndex = 13;
             this.simpleButton1.Text = "GETİR";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // labelControl1
             // 
@@ -141,7 +142,7 @@
             // colStok_Kodu
             // 
             this.colStok_Kodu.Caption = "MÜŞTERİ ADI";
-            this.colStok_Kodu.FieldName = "Stok_Kodu";
+            this.colStok_Kodu.FieldName = "Musteriadi";
             this.colStok_Kodu.Name = "colStok_Kodu";
             this.colStok_Kodu.Visible = true;
             this.colStok_Kodu.VisibleIndex = 0;
@@ -149,7 +150,7 @@
             // colStok_Adi
             // 
             this.colStok_Adi.Caption = "ÜRÜN ADI";
-            this.colStok_Adi.FieldName = "Stok_Adi";
+            this.colStok_Adi.FieldName = "Urunadi";
             this.colStok_Adi.Name = "colStok_Adi";
             this.colStok_Adi.Visible = true;
             this.colStok_Adi.VisibleIndex = 1;
@@ -157,7 +158,7 @@
             // colUrun_Turu
             // 
             this.colUrun_Turu.Caption = "ADET";
-            this.colUrun_Turu.FieldName = "Urun_Turu";
+            this.colUrun_Turu.FieldName = "adet";
             this.colUrun_Turu.Name = "colUrun_Turu";
             this.colUrun_Turu.Visible = true;
             this.colUrun_Turu.VisibleIndex = 2;
@@ -165,7 +166,7 @@
             // colAdet
             // 
             this.colAdet.Caption = "GENİŞLİK";
-            this.colAdet.FieldName = "Adet";
+            this.colAdet.FieldName = "genislik";
             this.colAdet.Name = "colAdet";
             this.colAdet.Visible = true;
             this.colAdet.VisibleIndex = 3;
@@ -173,7 +174,7 @@
             // colGenislik
             // 
             this.colGenislik.Caption = "YUKSEKLİK";
-            this.colGenislik.FieldName = "Genislik";
+            this.colGenislik.FieldName = "yukseklik";
             this.colGenislik.Name = "colGenislik";
             this.colGenislik.Visible = true;
             this.colGenislik.VisibleIndex = 4;
@@ -181,7 +182,7 @@
             // colYukseklik
             // 
             this.colYukseklik.Caption = "TESLİM TARİHİ";
-            this.colYukseklik.FieldName = "Yukseklik";
+            this.colYukseklik.FieldName = "teslimtarihi";
             this.colYukseklik.Name = "colYukseklik";
             this.colYukseklik.Visible = true;
             this.colYukseklik.VisibleIndex = 5;

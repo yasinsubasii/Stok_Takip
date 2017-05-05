@@ -22,6 +22,8 @@ namespace Stok_Takip.Siparis
         Modul_Sttok.Siparis spr;
         private void Siparis_Durum_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mayaStokDataSet2.Siparis' table. You can move, or remove it, as needed.
+            this.siparisTableAdapter2.Fill(this.mayaStokDataSet2.Siparis);
             // TODO: This line of code loads data into the 'mayaStokDataSet1.Siparis' table. You can move, or remove it, as needed.
             this.siparisTableAdapter.Fill(this.mayaStokDataSet1.Siparis);
             // TODO: This line of code loads data into the 'mayaStokDataSet.Urunler' table. You can move, or remove it, as needed.
@@ -30,6 +32,11 @@ namespace Stok_Takip.Siparis
             spr = new Modul_Sttok.Siparis();
 
          
+
+        }
+
+        private void button_goster_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
 
         }
     }

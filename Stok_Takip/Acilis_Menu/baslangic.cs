@@ -158,7 +158,8 @@ namespace Stok_Takip.Acilis_Menu
 
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            uretim.UretimMakina urt = new uretim.UretimMakina();
+            urt.Show();
         }
     }
 }

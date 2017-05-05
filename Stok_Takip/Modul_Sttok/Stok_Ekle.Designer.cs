@@ -35,14 +35,10 @@ namespace Stok_Takip.Modul_Sttok
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.txt_yukseklik = new DevExpress.XtraEditors.TextEdit();
-            this.txtadet = new DevExpress.XtraEditors.TextEdit();
             this.txturun_adi = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.txtstok_kodu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -52,28 +48,23 @@ namespace Stok_Takip.Modul_Sttok
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.combobox_uruncinsi = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txt_genislik = new DevExpress.XtraEditors.TextEdit();
+            this.txtadet = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_yukseklik.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtadet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txturun_adi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstok_kodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.combobox_uruncinsi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_genislik.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtadet.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.checkEdit1);
             this.groupControl1.Controls.Add(this.txt_yukseklik);
-            this.groupControl1.Controls.Add(this.txtadet);
             this.groupControl1.Controls.Add(this.txturun_adi);
-            this.groupControl1.Controls.Add(this.textEdit2);
             this.groupControl1.Controls.Add(this.txtstok_kodu);
             this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.labelControl3);
@@ -83,22 +74,12 @@ namespace Stok_Takip.Modul_Sttok
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.combobox_uruncinsi);
             this.groupControl1.Controls.Add(this.txt_genislik);
+            this.groupControl1.Controls.Add(this.txtadet);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1005, 657);
+            this.groupControl1.Size = new System.Drawing.Size(485, 581);
             this.groupControl1.TabIndex = 0;
-            // 
-            // checkEdit1
-            // 
-            this.checkEdit1.Location = new System.Drawing.Point(351, 422);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit1.Properties.Caption = "REZERVE";
-            this.checkEdit1.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.checkEdit1.Size = new System.Drawing.Size(102, 23);
-            this.checkEdit1.TabIndex = 4;
             // 
             // txt_yukseklik
             // 
@@ -107,26 +88,12 @@ namespace Stok_Takip.Modul_Sttok
             this.txt_yukseklik.Size = new System.Drawing.Size(100, 20);
             this.txt_yukseklik.TabIndex = 2;
             // 
-            // txtadet
-            // 
-            this.txtadet.Location = new System.Drawing.Point(230, 238);
-            this.txtadet.Name = "txtadet";
-            this.txtadet.Size = new System.Drawing.Size(168, 20);
-            this.txtadet.TabIndex = 2;
-            // 
             // txturun_adi
             // 
             this.txturun_adi.Location = new System.Drawing.Point(230, 185);
             this.txturun_adi.Name = "txturun_adi";
             this.txturun_adi.Size = new System.Drawing.Size(168, 20);
             this.txturun_adi.TabIndex = 2;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(630, 65);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(107, 20);
-            this.textEdit2.TabIndex = 2;
             // 
             // txtstok_kodu
             // 
@@ -144,16 +111,6 @@ namespace Stok_Takip.Modul_Sttok
             this.labelControl5.Size = new System.Drawing.Size(93, 19);
             this.labelControl5.TabIndex = 1;
             this.labelControl5.Text = "YÜKSEKLİK";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
-            this.labelControl7.Location = new System.Drawing.Point(545, 68);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(46, 19);
-            this.labelControl7.TabIndex = 1;
-            this.labelControl7.Text = "RENK";
             // 
             // labelControl6
             // 
@@ -181,9 +138,9 @@ namespace Stok_Takip.Modul_Sttok
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
             this.labelControl3.Location = new System.Drawing.Point(84, 188);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(100, 19);
+            this.labelControl3.Size = new System.Drawing.Size(80, 19);
             this.labelControl3.TabIndex = 1;
-            this.labelControl3.Text = "ÜRÜN TÜRÜ";
+            this.labelControl3.Text = "STOK ADI";
             // 
             // labelControl2
             // 
@@ -191,9 +148,9 @@ namespace Stok_Takip.Modul_Sttok
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
             this.labelControl2.Location = new System.Drawing.Point(84, 131);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(100, 19);
+            this.labelControl2.Size = new System.Drawing.Size(96, 19);
             this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "ÜRÜN CİNSİ";
+            this.labelControl2.Text = "STOK CİNSİ";
             // 
             // simpleButton3
             // 
@@ -255,11 +212,22 @@ namespace Stok_Takip.Modul_Sttok
             this.txt_genislik.Size = new System.Drawing.Size(100, 20);
             this.txt_genislik.TabIndex = 2;
             // 
+            // txtadet
+            // 
+            this.txtadet.Location = new System.Drawing.Point(230, 238);
+            this.txtadet.Name = "txtadet";
+            this.txtadet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtadet.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtadet.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtadet.Size = new System.Drawing.Size(100, 20);
+            this.txtadet.TabIndex = 2;
+            // 
             // Stok_Ekle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 657);
+            this.ClientSize = new System.Drawing.Size(485, 581);
             this.Controls.Add(this.groupControl1);
             this.Name = "Stok_Ekle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -268,14 +236,12 @@ namespace Stok_Takip.Modul_Sttok
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_yukseklik.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtadet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txturun_adi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstok_kodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.combobox_uruncinsi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_genislik.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtadet.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,11 +261,8 @@ namespace Stok_Takip.Modul_Sttok
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.TextEdit txt_genislik;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
-        private DevExpress.XtraEditors.TextEdit txtadet;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.SpinEdit txtadet;
     }
     
 }

@@ -60,6 +60,7 @@
           <Property Name="UrunID" Type="int" />
           <Property Name="SiparisTarihi" Type="datetime" />
           <Property Name="TeslimTarihi" Type="datetime" />
+          <Property Name="Adet" Type="int" />
           <Property Name="goster" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Tur">
@@ -108,7 +109,7 @@
           <Property Name="DolguAgirligi" Type="nvarchar" MaxLength="255" />
           <Property Name="KareBasiGramaj" Type="nvarchar" MaxLength="255" />
           <Property Name="KareBasiGramajAciklama" Type="nvarchar" MaxLength="255" />
-          <Property Name="KesİmOlcutu" Type="nvarchar" MaxLength="255" />
+          <Property Name="KesimOlcutu" Type="nvarchar" MaxLength="255" />
           <Property Name="MarkaEtiketi" Type="nvarchar" MaxLength="255" />
           <Property Name="NomiteEtiket" Type="nvarchar" MaxLength="255" />
           <Property Name="UrunYikamaEtiketi" Type="nvarchar" MaxLength="255" />
@@ -173,11 +174,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Siparis_Urunler">
-          <End Role="Urunler" Type="Self.Urunler" Multiplicity="0..1" />
+        <Association Name="FK_Siparis_UretimBilgi">
+          <End Role="UretimBilgi" Type="Self.UretimBilgi" Multiplicity="0..1" />
           <End Role="Siparis" Type="Self.Siparis" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Urunler">
+            <Principal Role="UretimBilgi">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Siparis">
@@ -199,6 +200,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_UretimBilgi_UretimBilgi">
+          <End Role="UretimBilgi" Type="Self.UretimBilgi" Multiplicity="1" />
+          <End Role="UretimBilgi1" Type="Self.UretimBilgi" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="UretimBilgi">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UretimBilgi1">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="MayaStokModelStoreContainer">
           <EntitySet Name="HazirUrunler" EntityType="Self.HazirUrunler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
@@ -213,13 +226,17 @@
             <End Role="Musteri" EntitySet="Musteri" />
             <End Role="Siparis" EntitySet="Siparis" />
           </AssociationSet>
-          <AssociationSet Name="FK_Siparis_Urunler" Association="Self.FK_Siparis_Urunler">
-            <End Role="Urunler" EntitySet="Urunler" />
+          <AssociationSet Name="FK_Siparis_UretimBilgi" Association="Self.FK_Siparis_UretimBilgi">
+            <End Role="UretimBilgi" EntitySet="UretimBilgi" />
             <End Role="Siparis" EntitySet="Siparis" />
           </AssociationSet>
           <AssociationSet Name="FK_Tur_Urunler" Association="Self.FK_Tur_Urunler">
             <End Role="Urunler" EntitySet="Urunler" />
             <End Role="Tur" EntitySet="Tur" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UretimBilgi_UretimBilgi" Association="Self.FK_UretimBilgi_UretimBilgi">
+            <End Role="UretimBilgi" EntitySet="UretimBilgi" />
+            <End Role="UretimBilgi1" EntitySet="UretimBilgi" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -240,13 +257,17 @@
             <End Role="Musteri" EntitySet="Musteri" />
             <End Role="Siparis" EntitySet="Siparis" />
           </AssociationSet>
-          <AssociationSet Name="FK_Siparis_Urunler" Association="MayaStokModel.FK_Siparis_Urunler">
-            <End Role="Urunler" EntitySet="Urunler" />
+          <AssociationSet Name="FK_Siparis_UretimBilgi" Association="MayaStokModel.FK_Siparis_UretimBilgi">
+            <End Role="UretimBilgi" EntitySet="UretimBilgi" />
             <End Role="Siparis" EntitySet="Siparis" />
           </AssociationSet>
           <AssociationSet Name="FK_Tur_Urunler" Association="MayaStokModel.FK_Tur_Urunler">
             <End Role="Urunler" EntitySet="Urunler" />
             <End Role="Tur" EntitySet="Tur" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UretimBilgi_UretimBilgi" Association="MayaStokModel.FK_UretimBilgi_UretimBilgi">
+            <End Role="UretimBilgi" EntitySet="UretimBilgi" />
+            <End Role="UretimBilgi1" EntitySet="UretimBilgi" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="HazirUrunler">
@@ -305,9 +326,10 @@
           <Property Name="UrunID" Type="Int32" />
           <Property Name="SiparisTarihi" Type="DateTime" Precision="3" />
           <Property Name="TeslimTarihi" Type="DateTime" Precision="3" />
+          <Property Name="Adet" Type="Int32" />
           <Property Name="goster" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Musteri" Relationship="MayaStokModel.FK_Siparis_Musteri" FromRole="Siparis" ToRole="Musteri" />
-          <NavigationProperty Name="Urunler" Relationship="MayaStokModel.FK_Siparis_Urunler" FromRole="Siparis" ToRole="Urunler" />
+          <NavigationProperty Name="UretimBilgi" Relationship="MayaStokModel.FK_Siparis_UretimBilgi" FromRole="Siparis" ToRole="UretimBilgi" />
         </EntityType>
         <EntityType Name="Tur">
           <Key>
@@ -356,7 +378,7 @@
           <Property Name="DolguAgirligi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="KareBasiGramaj" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="KareBasiGramajAciklama" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="KesİmOlcutu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="KesimOlcutu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="MarkaEtiketi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="NomiteEtiket" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="UrunYikamaEtiketi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
@@ -370,6 +392,9 @@
           <Property Name="Agirlik" Type="Double" />
           <Property Name="ic_dis_koruk" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="BirimUrunBiye" Type="Double" />
+          <NavigationProperty Name="Siparis" Relationship="MayaStokModel.FK_Siparis_UretimBilgi" FromRole="UretimBilgi" ToRole="Siparis" />
+          <NavigationProperty Name="UretimBilgi1" Relationship="MayaStokModel.FK_UretimBilgi_UretimBilgi" FromRole="UretimBilgi" ToRole="UretimBilgi1" />
+          <NavigationProperty Name="UretimBilgi2" Relationship="MayaStokModel.FK_UretimBilgi_UretimBilgi" FromRole="UretimBilgi1" ToRole="UretimBilgi" />
         </EntityType>
         <EntityType Name="Urunler">
           <Key>
@@ -383,7 +408,6 @@
           <Property Name="Genislik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Yukseklik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Güncelle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Siparis" Relationship="MayaStokModel.FK_Siparis_Urunler" FromRole="Urunler" ToRole="Siparis" />
           <NavigationProperty Name="Tur" Relationship="MayaStokModel.FK_Tur_Urunler" FromRole="Urunler" ToRole="Tur" />
         </EntityType>
         <EntityType Name="Üretim_Dikim">
@@ -423,11 +447,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Siparis_Urunler">
-          <End Type="MayaStokModel.Urunler" Role="Urunler" Multiplicity="0..1" />
+        <Association Name="FK_Siparis_UretimBilgi">
+          <End Type="MayaStokModel.UretimBilgi" Role="UretimBilgi" Multiplicity="0..1" />
           <End Type="MayaStokModel.Siparis" Role="Siparis" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Urunler">
+            <Principal Role="UretimBilgi">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Siparis">
@@ -445,6 +469,18 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Tur">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UretimBilgi_UretimBilgi">
+          <End Type="MayaStokModel.UretimBilgi" Role="UretimBilgi" Multiplicity="1" />
+          <End Type="MayaStokModel.UretimBilgi" Role="UretimBilgi1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="UretimBilgi">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UretimBilgi1">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
@@ -508,6 +544,7 @@
             <EntityTypeMapping TypeName="MayaStokModel.Siparis">
               <MappingFragment StoreEntitySet="Siparis">
                 <ScalarProperty Name="goster" ColumnName="goster" />
+                <ScalarProperty Name="Adet" ColumnName="Adet" />
                 <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
                 <ScalarProperty Name="SiparisTarihi" ColumnName="SiparisTarihi" />
                 <ScalarProperty Name="UrunID" ColumnName="UrunID" />
@@ -548,7 +585,7 @@
                 <ScalarProperty Name="UrunYikamaEtiketi" ColumnName="UrunYikamaEtiketi" />
                 <ScalarProperty Name="NomiteEtiket" ColumnName="NomiteEtiket" />
                 <ScalarProperty Name="MarkaEtiketi" ColumnName="MarkaEtiketi" />
-                <ScalarProperty Name="KesİmOlcutu" ColumnName="KesİmOlcutu" />
+                <ScalarProperty Name="KesimOlcutu" ColumnName="KesimOlcutu" />
                 <ScalarProperty Name="KareBasiGramajAciklama" ColumnName="KareBasiGramajAciklama" />
                 <ScalarProperty Name="KareBasiGramaj" ColumnName="KareBasiGramaj" />
                 <ScalarProperty Name="DolguAgirligi" ColumnName="DolguAgirligi" />

@@ -14,6 +14,12 @@ namespace Stok_Takip.Modul_Sttok
     
     public partial class UretimBilgi
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public UretimBilgi()
+        {
+            this.Siparis = new HashSet<Siparis>();
+        }
+    
         public int id { get; set; }
         public string Urun_Kalite_Kodu { get; set; }
         public string SERİSİ { get; set; }
@@ -42,7 +48,7 @@ namespace Stok_Takip.Modul_Sttok
         public string DolguAgirligi { get; set; }
         public string KareBasiGramaj { get; set; }
         public string KareBasiGramajAciklama { get; set; }
-        public string KesİmOlcutu { get; set; }
+        public string KesimOlcutu { get; set; }
         public string MarkaEtiketi { get; set; }
         public string NomiteEtiket { get; set; }
         public string UrunYikamaEtiketi { get; set; }
@@ -56,5 +62,10 @@ namespace Stok_Takip.Modul_Sttok
         public Nullable<double> Agirlik { get; set; }
         public string ic_dis_koruk { get; set; }
         public Nullable<double> BirimUrunBiye { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Siparis> Siparis { get; set; }
+        public virtual UretimBilgi UretimBilgi1 { get; set; }
+        public virtual UretimBilgi UretimBilgi2 { get; set; }
     }
 }

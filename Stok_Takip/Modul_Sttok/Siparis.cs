@@ -20,9 +20,10 @@ namespace Stok_Takip.Modul_Sttok
         public Nullable<int> UrunID { get; set; }
         public Nullable<System.DateTime> SiparisTarihi { get; set; }
         public Nullable<System.DateTime> TeslimTarihi { get; set; }
+        public Nullable<int> Adet { get; set; }
         public string goster { get; set; }
     
         public virtual Musteri Musteri { get; set; }
-        public virtual Urunler Urunler { get; set; }
+        public virtual UretimBilgi UretimBilgi { get; set; }
     }
 }

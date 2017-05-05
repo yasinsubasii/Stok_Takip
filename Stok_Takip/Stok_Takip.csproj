@@ -114,6 +114,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MayaStokDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MayaStokDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MayaStokDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modul_Sttok\HazirUrunler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -193,6 +198,12 @@
     <Compile Include="Siparis\siparis.Designer.cs">
       <DependentUpon>siparis.cs</DependentUpon>
     </Compile>
+    <Compile Include="uretim\Uretim_Makine_Detay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uretim\Uretim_Makine_Detay.Designer.cs">
+      <DependentUpon>Uretim_Makine_Detay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Siparis\Siparis_Durum.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +263,9 @@
     <EmbeddedResource Include="Siparis\siparis.resx">
       <DependentUpon>siparis.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uretim\Uretim_Makine_Detay.resx">
+      <DependentUpon>Uretim_Makine_Detay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Siparis\Siparis_Durum.resx">
       <DependentUpon>Siparis_Durum.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +304,17 @@
     </None>
     <None Include="MayaStokDataSet1.xss">
       <DependentUpon>MayaStokDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MayaStokDataSet2.xsc">
+      <DependentUpon>MayaStokDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MayaStokDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MayaStokDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MayaStokDataSet2.xss">
+      <DependentUpon>MayaStokDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Modul_Sttok\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
