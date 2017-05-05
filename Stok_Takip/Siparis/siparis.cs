@@ -32,6 +32,8 @@ namespace Stok_Takip
             spr = new Modul_Sttok.Siparis();
             spr.MusteriID = musteriid[idm];
             spr.UrunID = Urunid[idu];
+            spr.Urunadi = txt_Urun_Adi.Text;
+            spr.Musteriadi = txt_Müsteri_Adi.Text;
             spr.Siparis_Kodu = "KD_" + Urunid[idu].ToString();
             spr.TeslimTarihi = Convert.ToDateTime(dateTimeTeslimat.Text);
             spr.SiparisTarihi = DateTime.Today;

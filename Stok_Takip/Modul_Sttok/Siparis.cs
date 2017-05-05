@@ -18,6 +18,8 @@ namespace Stok_Takip.Modul_Sttok
         public string Siparis_Kodu { get; set; }
         public Nullable<int> MusteriID { get; set; }
         public Nullable<int> UrunID { get; set; }
+        public string Musteriadi { get; set; }
+        public string Urunadi { get; set; }
         public Nullable<System.DateTime> SiparisTarihi { get; set; }
         public Nullable<System.DateTime> TeslimTarihi { get; set; }
         public Nullable<int> Adet { get; set; }

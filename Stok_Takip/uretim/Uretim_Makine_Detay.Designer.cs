@@ -1,6 +1,6 @@
-﻿namespace Stok_Takip.Siparis
+﻿namespace Stok_Takip.uretim
 {
-    partial class SiparisDetay
+    partial class Uretim_Makine_Detay
     {
         /// <summary>
         /// Required designer variable.
@@ -698,6 +698,7 @@
             this.Controls.Add(this.labelControl1);
             this.Name = "SiparisDetay";
             this.Text = "SiparisDetay";
+            this.Load += new System.EventHandler(this.Uretim_Makine_Detay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Urun_Kalite_Kodu_txt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SERİSİ_TXT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Uretimithal_txt.Properties)).EndInit();

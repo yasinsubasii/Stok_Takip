@@ -320,6 +320,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Stok_Takip.uretim.UretimMakina+Makina.datasource" />
+    <None Include="Properties\DataSources\Stok_Takip.uretim.UretimMakina.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

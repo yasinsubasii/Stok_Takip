@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -38,11 +38,11 @@
             this.colStok_Kodu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStok_Adi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUrun_Turu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAdet = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGenislik = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colYukseklik = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridButon = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_islem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.Musid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Urid = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -79,15 +79,9 @@
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
-            "YASTIK MAKİNASI",
-            "YORGAN MAKİNASI",
-            "JARUSSİ/VAKUM1",
-            "VAKUM 2",
-            "İTHAL",
-            "HAUSER / MAMUT"});
             this.comboBoxEdit1.Size = new System.Drawing.Size(206, 20);
             this.comboBoxEdit1.TabIndex = 14;
+            this.comboBoxEdit1.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit1_SelectedIndexChanged);
             // 
             // simpleButton1
             // 
@@ -130,10 +124,10 @@
             this.colStok_Kodu,
             this.colStok_Adi,
             this.colUrun_Turu,
-            this.colAdet,
-            this.colGenislik,
             this.colYukseklik,
-            this.gridButon});
+            this.gridButon,
+            this.Musid,
+            this.Urid});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
@@ -158,50 +152,48 @@
             // colUrun_Turu
             // 
             this.colUrun_Turu.Caption = "ADET";
-            this.colUrun_Turu.FieldName = "adet";
+            this.colUrun_Turu.FieldName = "Adet";
             this.colUrun_Turu.Name = "colUrun_Turu";
             this.colUrun_Turu.Visible = true;
             this.colUrun_Turu.VisibleIndex = 2;
             // 
-            // colAdet
-            // 
-            this.colAdet.Caption = "GENİŞLİK";
-            this.colAdet.FieldName = "genislik";
-            this.colAdet.Name = "colAdet";
-            this.colAdet.Visible = true;
-            this.colAdet.VisibleIndex = 3;
-            // 
-            // colGenislik
-            // 
-            this.colGenislik.Caption = "YUKSEKLİK";
-            this.colGenislik.FieldName = "yukseklik";
-            this.colGenislik.Name = "colGenislik";
-            this.colGenislik.Visible = true;
-            this.colGenislik.VisibleIndex = 4;
-            // 
             // colYukseklik
             // 
             this.colYukseklik.Caption = "TESLİM TARİHİ";
-            this.colYukseklik.FieldName = "teslimtarihi";
+            this.colYukseklik.FieldName = "TeslimTarihi";
             this.colYukseklik.Name = "colYukseklik";
             this.colYukseklik.Visible = true;
-            this.colYukseklik.VisibleIndex = 5;
+            this.colYukseklik.VisibleIndex = 3;
             // 
             // gridButon
             // 
             this.gridButon.Caption = "Button";
             this.gridButon.ColumnEdit = this.btn_islem;
+            this.gridButon.FieldName = "goster";
             this.gridButon.Name = "gridButon";
             this.gridButon.Visible = true;
-            this.gridButon.VisibleIndex = 6;
+            this.gridButon.VisibleIndex = 4;
             // 
             // btn_islem
             // 
             this.btn_islem.AutoHeight = false;
             this.btn_islem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::Stok_Takip.Properties.Resources.GÜNCELLE, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "güncelle", "güncelle", null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::Stok_Takip.Properties.Resources.GÜNCELLE, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "güncelle", "güncelle", null, true)});
             this.btn_islem.Name = "btn_islem";
             this.btn_islem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btn_islem.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btn_islem_ButtonClick);
+            // 
+            // Musid
+            // 
+            this.Musid.Caption = "Musteriid";
+            this.Musid.FieldName = "MusteriID";
+            this.Musid.Name = "Musid";
+            // 
+            // Urid
+            // 
+            this.Urid.Caption = "Urunid";
+            this.Urid.FieldName = "UrunID";
+            this.Urid.Name = "Urid";
             // 
             // UretimMakina
             // 
@@ -211,6 +203,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "UretimMakina";
             this.Text = "UretimMakina";
+            this.Load += new System.EventHandler(this.UretimMakina_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -235,10 +228,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colStok_Kodu;
         private DevExpress.XtraGrid.Columns.GridColumn colStok_Adi;
         private DevExpress.XtraGrid.Columns.GridColumn colUrun_Turu;
-        private DevExpress.XtraGrid.Columns.GridColumn colAdet;
-        private DevExpress.XtraGrid.Columns.GridColumn colGenislik;
         private DevExpress.XtraGrid.Columns.GridColumn colYukseklik;
         private DevExpress.XtraGrid.Columns.GridColumn gridButon;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn_islem;
+        private DevExpress.XtraGrid.Columns.GridColumn Musid;
+        private DevExpress.XtraGrid.Columns.GridColumn Urid;
     }
 }

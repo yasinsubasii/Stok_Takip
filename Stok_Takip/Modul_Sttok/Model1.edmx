@@ -58,6 +58,8 @@
           <Property Name="Siparis_Kodu" Type="nvarchar" MaxLength="50" />
           <Property Name="MusteriID" Type="int" />
           <Property Name="UrunID" Type="int" />
+          <Property Name="Musteriadi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Urunadi" Type="nvarchar" MaxLength="50" />
           <Property Name="SiparisTarihi" Type="datetime" />
           <Property Name="TeslimTarihi" Type="datetime" />
           <Property Name="Adet" Type="int" />
@@ -324,6 +326,8 @@
           <Property Name="Siparis_Kodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MusteriID" Type="Int32" />
           <Property Name="UrunID" Type="Int32" />
+          <Property Name="Musteriadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Urunadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SiparisTarihi" Type="DateTime" Precision="3" />
           <Property Name="TeslimTarihi" Type="DateTime" Precision="3" />
           <Property Name="Adet" Type="Int32" />
@@ -547,6 +551,8 @@
                 <ScalarProperty Name="Adet" ColumnName="Adet" />
                 <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
                 <ScalarProperty Name="SiparisTarihi" ColumnName="SiparisTarihi" />
+                <ScalarProperty Name="Urunadi" ColumnName="Urunadi" />
+                <ScalarProperty Name="Musteriadi" ColumnName="Musteriadi" />
                 <ScalarProperty Name="UrunID" ColumnName="UrunID" />
                 <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
                 <ScalarProperty Name="Siparis_Kodu" ColumnName="Siparis_Kodu" />
