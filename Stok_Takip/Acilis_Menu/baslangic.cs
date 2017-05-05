@@ -143,5 +143,22 @@ namespace Stok_Takip.Acilis_Menu
             }
             bag.Close();
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            SifreForm sf = new SifreForm();
+            sf.Show();
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Siparis.Siparis_Durum spd = new Siparis.Siparis_Durum();
+            spd.Show();
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

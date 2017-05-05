@@ -33,19 +33,21 @@ namespace Stok_Takip
 
         private void btn_giris_Click(object sender, EventArgs e)
         {
-            var stok = db.Personel.Where(w => w.AdiSoyadi == K_adi.Text.ToString() && w.Sifre == Sifre.Text.ToString()).ToList();
+            var stok = db.Personel.Where(w => w.K_adi == K_adi.Text.ToString() && w.Sifre == Sifre.Text.ToString()).ToList();
             prs = stok.FirstOrDefault();
             if(prs != null)
             {
                 if(prs.Yetki == "Depo")
                 {
                     Fonksiyonlar.Rutbe.rutbe = "Depo";
+                    Fonksiyonlar.Rutbe.id = prs.id;
                     Acilis_Menu.baslangic my = new Acilis_Menu.baslangic();
                     my.Show();
                 }
                 else if (prs.Yetki == "Yönetici")
                 {
                     Fonksiyonlar.Rutbe.rutbe = "Yönetici";
+                    Fonksiyonlar.Rutbe.id = prs.id;
                     Acilis_Menu.baslangic my = new Acilis_Menu.baslangic();
                     my.Show();
                 }

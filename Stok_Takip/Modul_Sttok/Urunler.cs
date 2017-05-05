@@ -14,6 +14,12 @@ namespace Stok_Takip.Modul_Sttok
     
     public partial class Urunler
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Urunler()
+        {
+            this.Siparis = new HashSet<Siparis>();
+        }
+    
         public int id { get; set; }
         public string Stok_Kodu { get; set; }
         public string Stok_Adi { get; set; }
@@ -23,7 +29,8 @@ namespace Stok_Takip.Modul_Sttok
         public string Yukseklik { get; set; }
         public string Güncelle { get; set; }
     
-        public virtual Siparis Siparis { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Siparis> Siparis { get; set; }
         public virtual Tur Tur { get; set; }
     }
 }

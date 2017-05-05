@@ -14,7 +14,13 @@ namespace Stok_Takip.Modul_Sttok
     
     public partial class Musteri
     {
-        public int MusteriID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Musteri()
+        {
+            this.Siparis = new HashSet<Siparis>();
+        }
+    
+        public int id { get; set; }
         public string Adi { get; set; }
         public string Adres { get; set; }
         public string Sehir { get; set; }
@@ -24,6 +30,7 @@ namespace Stok_Takip.Modul_Sttok
         public string Email { get; set; }
         public string Faks { get; set; }
     
-        public virtual Siparis Siparis { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Siparis> Siparis { get; set; }
     }
 }

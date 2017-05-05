@@ -47,12 +47,14 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnsifre = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.k_adi = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             ((System.ComponentModel.ISupportInitialize)(ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -85,10 +87,11 @@
             this.barButtonItem3,
             this.barButtonItem4,
             this.barButtonItem5,
-            this.barButtonItem6});
+            this.barButtonItem6,
+            this.barButtonItem7});
             ribbon.Location = new System.Drawing.Point(0, 0);
             ribbon.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            ribbon.MaxItemId = 16;
+            ribbon.MaxItemId = 17;
             ribbon.Name = "ribbon";
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.stok,
@@ -167,6 +170,7 @@
             this.barButtonItem6.Id = 15;
             this.barButtonItem6.LargeGlyph = global::Stok_Takip.Properties.Resources.GÜNCELLE;
             this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
             // stok
             // 
@@ -201,6 +205,7 @@
             this.ribbonPageGroup2.AllowTextClipping = false;
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.ShowCaptionButton = false;
             // 
@@ -258,6 +263,7 @@
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.Controls.Add(this.btnsifre);
             this.splitContainer3.Panel2.Controls.Add(this.labelControl2);
             this.splitContainer3.Panel2.Controls.Add(this.k_adi);
             this.splitContainer3.Panel2.Controls.Add(this.simpleButton1);
@@ -274,6 +280,15 @@
             this.pictureBox1.Size = new System.Drawing.Size(80, 104);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnsifre
+            // 
+            this.btnsifre.Location = new System.Drawing.Point(11, 110);
+            this.btnsifre.Name = "btnsifre";
+            this.btnsifre.Size = new System.Drawing.Size(101, 23);
+            this.btnsifre.TabIndex = 3;
+            this.btnsifre.Text = "ŞİFRE DEĞİŞTİR";
+            this.btnsifre.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // labelControl2
             // 
@@ -336,6 +351,14 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "ÜretimMakinalar";
+            this.barButtonItem7.Id = 16;
+            this.barButtonItem7.LargeGlyph = global::Stok_Takip.Properties.Resources.k_giris;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            // 
             // baslangic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,5 +416,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraEditors.SimpleButton btnsifre;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
     }
 }

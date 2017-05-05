@@ -8,6 +8,7 @@ namespace Stok_Takip.Fonksiyonlar
 {
     class Rutbe
     {
-        public static string rutbe;      
+        public static string rutbe;
+        public static int id;   
     }
 }

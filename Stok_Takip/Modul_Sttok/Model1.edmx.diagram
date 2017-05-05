@@ -5,18 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="774775f2041d4b87806d20fe9f72360a" Name="Diagram1">
-        <EntityTypeShape EntityType="MayaStokModel.HazirUrunler" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="MayaStokModel.Log" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MayaStokModel.Musteri" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="MayaStokModel.Personel" Width="1.5" PointX="6.125" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MayaStokModel.Siparis" Width="1.5" PointX="3.5" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MayaStokModel.Tur" Width="1.5" PointX="4.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MayaStokModel.Urunler" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MayaStokModel.Üretim_Dikim" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="MayaStokModel.FK_Siparis_HazirUrunler" ManuallyRouted="false" />
-        <AssociationConnector Association="MayaStokModel.FK_Siparis_Musteri" ManuallyRouted="false" />
-        <AssociationConnector Association="MayaStokModel.FK_Siparis_Urunler" ManuallyRouted="false" />
-        <AssociationConnector Association="MayaStokModel.FK_Tur_Urunler" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MayaStokModel.HazirUrunler" Width="1.5" PointX="5.75" PointY="2.625" />
+        <EntityTypeShape EntityType="MayaStokModel.Log" Width="1.5" PointX="5.75" PointY="5.625" />
+        <EntityTypeShape EntityType="MayaStokModel.Musteri" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MayaStokModel.Personel" Width="1.5" PointX="5.75" PointY="8.625" />
+        <EntityTypeShape EntityType="MayaStokModel.Siparis" Width="1.5" PointX="3" PointY="3.875" />
+        <EntityTypeShape EntityType="MayaStokModel.Tur" Width="1.5" PointX="3" PointY="8.25" />
+        <EntityTypeShape EntityType="MayaStokModel.UretimBilgi" Width="1.5" PointX="7.75" PointY="2.625" />
+        <EntityTypeShape EntityType="MayaStokModel.Urunler" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MayaStokModel.Üretim_Dikim" Width="1.5" PointX="9.75" PointY="2.625" />
+        <AssociationConnector Association="MayaStokModel.FK_Siparis_Musteri" />
+        <AssociationConnector Association="MayaStokModel.FK_Siparis_Urunler" />
+        <AssociationConnector Association="MayaStokModel.FK_Tur_Urunler" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

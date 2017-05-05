@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.txt_Müsteri_Adi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_Urun_Adi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Miktar = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -41,11 +39,13 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.dateTimeTeslimat = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Müsteri_Adi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_Adi.Properties)).BeginInit();
+            this.txt_Urun_Adi = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txt_Müsteri_Adi = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Miktar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Genislik.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Yukseklik.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_Adi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Müsteri_Adi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton1
@@ -57,13 +57,6 @@
             this.simpleButton1.Text = "KAYDET";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // txt_Müsteri_Adi
-            // 
-            this.txt_Müsteri_Adi.Location = new System.Drawing.Point(160, 60);
-            this.txt_Müsteri_Adi.Name = "txt_Müsteri_Adi";
-            this.txt_Müsteri_Adi.Size = new System.Drawing.Size(167, 20);
-            this.txt_Müsteri_Adi.TabIndex = 1;
-            // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(55, 63);
@@ -71,13 +64,6 @@
             this.labelControl1.Size = new System.Drawing.Size(44, 13);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "MÜSTERİ";
-            // 
-            // txt_Urun_Adi
-            // 
-            this.txt_Urun_Adi.Location = new System.Drawing.Point(160, 100);
-            this.txt_Urun_Adi.Name = "txt_Urun_Adi";
-            this.txt_Urun_Adi.Size = new System.Drawing.Size(167, 20);
-            this.txt_Urun_Adi.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -104,6 +90,7 @@
             // 
             // txt_Genislik
             // 
+            this.txt_Genislik.Enabled = false;
             this.txt_Genislik.Location = new System.Drawing.Point(505, 60);
             this.txt_Genislik.Name = "txt_Genislik";
             this.txt_Genislik.Size = new System.Drawing.Size(167, 20);
@@ -119,6 +106,7 @@
             // 
             // txt_Yukseklik
             // 
+            this.txt_Yukseklik.Enabled = false;
             this.txt_Yukseklik.Location = new System.Drawing.Point(505, 96);
             this.txt_Yukseklik.Name = "txt_Yukseklik";
             this.txt_Yukseklik.Size = new System.Drawing.Size(167, 20);
@@ -147,11 +135,30 @@
             this.dateTimeTeslimat.Size = new System.Drawing.Size(200, 21);
             this.dateTimeTeslimat.TabIndex = 4;
             // 
+            // txt_Urun_Adi
+            // 
+            this.txt_Urun_Adi.Location = new System.Drawing.Point(160, 100);
+            this.txt_Urun_Adi.Name = "txt_Urun_Adi";
+            this.txt_Urun_Adi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txt_Urun_Adi.Size = new System.Drawing.Size(167, 20);
+            this.txt_Urun_Adi.TabIndex = 1;
+            this.txt_Urun_Adi.SelectedIndexChanged += new System.EventHandler(this.txt_Urun_Adi_SelectedIndexChanged);
+            // 
+            // txt_Müsteri_Adi
+            // 
+            this.txt_Müsteri_Adi.Location = new System.Drawing.Point(160, 60);
+            this.txt_Müsteri_Adi.Name = "txt_Müsteri_Adi";
+            this.txt_Müsteri_Adi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txt_Müsteri_Adi.Size = new System.Drawing.Size(167, 20);
+            this.txt_Müsteri_Adi.TabIndex = 1;
+            // 
             // siparis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 285);
+            this.ClientSize = new System.Drawing.Size(788, 269);
             this.Controls.Add(this.dateTimeTeslimat);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl5);
@@ -161,19 +168,19 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txt_Miktar);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.txt_Urun_Adi);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.txt_Müsteri_Adi);
             this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.txt_Urun_Adi);
+            this.Controls.Add(this.txt_Müsteri_Adi);
             this.Name = "siparis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "siparis";
             this.Load += new System.EventHandler(this.siparis_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Müsteri_Adi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_Adi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Miktar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Genislik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Yukseklik.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Urun_Adi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Müsteri_Adi.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,9 +189,7 @@
         #endregion
 
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.TextEdit txt_Müsteri_Adi;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txt_Urun_Adi;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txt_Miktar;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -194,5 +199,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.DateTimePicker dateTimeTeslimat;
+        private DevExpress.XtraEditors.ComboBoxEdit txt_Urun_Adi;
+        private DevExpress.XtraEditors.ComboBoxEdit txt_Müsteri_Adi;
     }
 }

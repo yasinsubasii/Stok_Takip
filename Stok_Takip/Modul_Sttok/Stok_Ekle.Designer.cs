@@ -232,12 +232,16 @@ namespace Stok_Takip.Modul_Sttok
             this.combobox_uruncinsi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.combobox_uruncinsi.Properties.Items.AddRange(new object[] {
-            "ÇANTA",
-            "FÖY",
-            "KIMBIL",
-            "YASTIK",
-            "YORGAN",
-            "YÜN"});
+            "Biye",
+            "Canta",
+            "DolguMetaryali",
+            "Foy",
+            "KoseEtiketi",
+            "Kumas",
+            "MarkaEtiketi",
+            "NomiteEtiket",
+            "TozTorbasi",
+            "UrunYikamaEtiketi"});
             this.combobox_uruncinsi.Properties.Sorted = true;
             this.combobox_uruncinsi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.combobox_uruncinsi.Size = new System.Drawing.Size(168, 20);

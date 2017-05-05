@@ -19,7 +19,5 @@ namespace Stok_Takip.Modul_Sttok
         public string cinsi { get; set; }
         public Nullable<double> Genislik { get; set; }
         public Nullable<double> Yukseklik { get; set; }
-    
-        public virtual Siparis Siparis { get; set; }
     }
 }

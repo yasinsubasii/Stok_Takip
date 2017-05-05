@@ -31,6 +31,8 @@ namespace Stok_Takip.Modul_Sttok
 
         private void Stok_Guncelle_Load(object sender, EventArgs e)
         {
+            db = new MayaStokEntities();
+            
             txtstok_kodu.Text = urun.Stok_Kodu;
             txturun_adi.Text = urun.Stok_Adi;
             txturun_turu.Text = urun.Urun_Turu;

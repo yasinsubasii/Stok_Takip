@@ -16,7 +16,7 @@ namespace Stok_Takip
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Giris());
+            Application.Run(new Acilis_Menu.baslangic());
         }
     }
 }
