@@ -21,6 +21,7 @@ namespace Stok_Takip.Acilis_Menu
     public partial class baslangic : Form
     {
 
+        Modul_Sttok.MayaStokEntities db = new Modul_Sttok.MayaStokEntities();
         public baslangic()
         {
             InitializeComponent();
@@ -142,6 +143,12 @@ namespace Stok_Takip.Acilis_Menu
                 k_adi.Text = dr["AdiSoyadi"].ToString();
             }
             bag.Close();
+
+
+            var mesajlar = db.Mesaj.Where(w => w.Gonderenid == Fonksiyonlar.Rutbe.id).ToList();
+            gridControl1.DataSource = mesajlar;
+            var mesajlar2 = db.Mesaj.Where(w => w.Alanid == Fonksiyonlar.Rutbe.id).ToList();
+            gridControl2.DataSource = mesajlar2;
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -161,5 +168,34 @@ namespace Stok_Takip.Acilis_Menu
             uretim.UretimMakina urt = new uretim.UretimMakina();
             urt.Show();
         }
+
+        private void ButGonder_Click(object sender, EventArgs e)
+        {
+            Modul_Sttok.Mesaj msj = new Modul_Sttok.Mesaj();
+            int sayac = TxtKul.SelectedIndex;
+            msj.Gonderenid = Fonksiyonlar.Rutbe.id;           
+            msj.Alanid = idlist[sayac];
+            msj.Text = TxtMesaj.Text;
+            db.Mesaj.Add(msj);
+            db.SaveChanges();
+            MessageBox.Show("Mesaj Gönderildi");
+        }
+        List<int> idlist;
+        private void TxtRutbe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var kullanici = db.Personel.Where(w => w.Yetki == TxtRutbe.SelectedText).ToList();
+            idlist = new List<int>();
+            TxtKul.Properties.Items.Clear();
+            idlist.Clear();           
+            int x = 0;
+            while(x < kullanici.Count())
+            {
+                TxtKul.Properties.Items.Add(kullanici[x].AdiSoyadi);
+                idlist.Add(kullanici[x].id);
+                x++;
+            }
+        }
+
+   
     }
 }

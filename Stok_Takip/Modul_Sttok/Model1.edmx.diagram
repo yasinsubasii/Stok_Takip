@@ -7,13 +7,14 @@
       <Diagram DiagramId="774775f2041d4b87806d20fe9f72360a" Name="Diagram1" ZoomLevel="92">
         <EntityTypeShape EntityType="MayaStokModel.HazirUrunler" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="MayaStokModel.Log" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MayaStokModel.Mesaj" Width="1.5" PointX="7.75" PointY="4.75" />
         <EntityTypeShape EntityType="MayaStokModel.Musteri" Width="1.5" PointX="0.75" PointY="12.625" />
-        <EntityTypeShape EntityType="MayaStokModel.Personel" Width="1.5" PointX="7.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MayaStokModel.Personel" Width="1.5" PointX="5.75" PointY="7.75" />
         <EntityTypeShape EntityType="MayaStokModel.Siparis" Width="1.5" PointX="3" PointY="4.5" />
         <EntityTypeShape EntityType="MayaStokModel.Tur" Width="1.5" PointX="8" PointY="1" />
         <EntityTypeShape EntityType="MayaStokModel.UretimBilgi" Width="1.5" PointX="0.75" PointY="1.25" />
         <EntityTypeShape EntityType="MayaStokModel.Urunler" Width="1.5" PointX="5.75" PointY="1.125" />
-        <EntityTypeShape EntityType="MayaStokModel.Üretim_Dikim" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="MayaStokModel.Üretim_Dikim" Width="1.5" PointX="7.75" PointY="7.75" />
         <AssociationConnector Association="MayaStokModel.FK_Siparis_Musteri" />
         <AssociationConnector Association="MayaStokModel.FK_Siparis_UretimBilgi" />
         <AssociationConnector Association="MayaStokModel.FK_Tur_Urunler" />

@@ -23,6 +23,17 @@
           <Property Name="Giris_Zamani" Type="nvarchar(max)" />
           <Property Name="Giris_Kullanici_bilgisi" Type="nvarchar" MaxLength="150" />
         </EntityType>
+        <EntityType Name="Mesaj">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Gonderenid" Type="int" />
+          <Property Name="Alanid" Type="int" />
+          <Property Name="Gonderenadi" Type="nchar" MaxLength="10" />
+          <Property Name="Alanadi" Type="nchar" MaxLength="10" />
+          <Property Name="Text" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="Musteri">
           <Key>
             <PropertyRef Name="id" />
@@ -217,6 +228,7 @@
         <EntityContainer Name="MayaStokModelStoreContainer">
           <EntitySet Name="HazirUrunler" EntityType="Self.HazirUrunler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mesaj" EntityType="Self.Mesaj" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Musteri" EntityType="Self.Musteri" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personel" EntityType="Self.Personel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Siparis" EntityType="Self.Siparis" Schema="dbo" store:Type="Tables" />
@@ -248,6 +260,7 @@
         <EntityContainer Name="MayaStokEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="HazirUrunler" EntityType="MayaStokModel.HazirUrunler" />
           <EntitySet Name="Log" EntityType="MayaStokModel.Log" />
+          <EntitySet Name="Mesaj" EntityType="MayaStokModel.Mesaj" />
           <EntitySet Name="Musteri" EntityType="MayaStokModel.Musteri" />
           <EntitySet Name="Personel" EntityType="MayaStokModel.Personel" />
           <EntitySet Name="Siparis" EntityType="MayaStokModel.Siparis" />
@@ -289,6 +302,17 @@
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="Giris_Zamani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Giris_Kullanici_bilgisi" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Mesaj">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gonderenid" Type="Int32" />
+          <Property Name="Alanid" Type="Int32" />
+          <Property Name="Gonderenadi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Alanadi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Musteri">
           <Key>
@@ -511,6 +535,18 @@
               <MappingFragment StoreEntitySet="Log">
                 <ScalarProperty Name="Giris_Kullanici_bilgisi" ColumnName="Giris_Kullanici_bilgisi" />
                 <ScalarProperty Name="Giris_Zamani" ColumnName="Giris_Zamani" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mesaj">
+            <EntityTypeMapping TypeName="MayaStokModel.Mesaj">
+              <MappingFragment StoreEntitySet="Mesaj">
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Alanadi" ColumnName="Alanadi" />
+                <ScalarProperty Name="Gonderenadi" ColumnName="Gonderenadi" />
+                <ScalarProperty Name="Alanid" ColumnName="Alanid" />
+                <ScalarProperty Name="Gonderenid" ColumnName="Gonderenid" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
