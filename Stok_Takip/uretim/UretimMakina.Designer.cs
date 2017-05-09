@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -41,8 +42,13 @@
             this.colYukseklik = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridButon = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_islem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridButton2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btn_stok = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.Musid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Urid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.SpinEdit();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -51,6 +57,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_islem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_stok)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -62,9 +70,12 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.simpleButton2);
+            this.splitContainer1.Panel1.Controls.Add(this.labelControl2);
             this.splitContainer1.Panel1.Controls.Add(this.comboBoxEdit1);
             this.splitContainer1.Panel1.Controls.Add(this.simpleButton1);
             this.splitContainer1.Panel1.Controls.Add(this.labelControl1);
+            this.splitContainer1.Panel1.Controls.Add(this.textEdit1);
             // 
             // splitContainer1.Panel2
             // 
@@ -110,7 +121,8 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btn_islem});
+            this.btn_islem,
+            this.btn_stok});
             this.gridControl1.Size = new System.Drawing.Size(1139, 595);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -126,6 +138,7 @@
             this.colUrun_Turu,
             this.colYukseklik,
             this.gridButon,
+            this.gridButton2,
             this.Musid,
             this.Urid});
             this.gridView1.GridControl = this.gridControl1;
@@ -178,10 +191,28 @@
             // 
             this.btn_islem.AutoHeight = false;
             this.btn_islem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::Stok_Takip.Properties.Resources.GÜNCELLE, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "güncelle", "güncelle", null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::Stok_Takip.Properties.Resources.GÜNCELLE, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "güncelle", "güncelle", null, true)});
             this.btn_islem.Name = "btn_islem";
             this.btn_islem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btn_islem.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btn_islem_ButtonClick);
+            // 
+            // gridButton2
+            // 
+            this.gridButton2.Caption = "StokButton";
+            this.gridButton2.ColumnEdit = this.btn_stok;
+            this.gridButton2.FieldName = "stok";
+            this.gridButton2.Name = "gridButton2";
+            this.gridButton2.Visible = true;
+            this.gridButton2.VisibleIndex = 5;
+            // 
+            // btn_stok
+            // 
+            this.btn_stok.AutoHeight = false;
+            this.btn_stok.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::Stok_Takip.Properties.Resources.GİRİS, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Stok", "Stok", null, true)});
+            this.btn_stok.Name = "btn_stok";
+            this.btn_stok.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btn_stok.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btn_stok_ButtonClick);
             // 
             // Musid
             // 
@@ -194,6 +225,50 @@
             this.Urid.Caption = "Urunid";
             this.Urid.FieldName = "UrunID";
             this.Urid.Name = "Urid";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelControl2.Location = new System.Drawing.Point(886, 14);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(105, 19);
+            this.labelControl2.TabIndex = 16;
+            this.labelControl2.Text = "Üretilen Sayı";
+            this.labelControl2.Visible = false;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.textEdit1.Location = new System.Drawing.Point(906, 39);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit1.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.textEdit1.Properties.Mask.EditMask = "n0";
+            this.textEdit1.Properties.MaxValue = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.textEdit1.Size = new System.Drawing.Size(62, 20);
+            this.textEdit1.TabIndex = 15;
+            this.textEdit1.Visible = false;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Image = global::Stok_Takip.Properties.Resources.k_giris2;
+            this.simpleButton2.Location = new System.Drawing.Point(1008, 20);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(85, 35);
+            this.simpleButton2.TabIndex = 17;
+            this.simpleButton2.Text = "Kaydet";
+            this.simpleButton2.Visible = false;
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // UretimMakina
             // 
@@ -213,6 +288,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_islem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_stok)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,5 +310,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn_islem;
         private DevExpress.XtraGrid.Columns.GridColumn Musid;
         private DevExpress.XtraGrid.Columns.GridColumn Urid;
+        private DevExpress.XtraGrid.Columns.GridColumn gridButton2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn_stok;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.SpinEdit textEdit1;
     }
 }

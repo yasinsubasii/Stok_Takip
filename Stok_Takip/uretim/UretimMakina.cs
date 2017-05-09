@@ -13,8 +13,8 @@ namespace Stok_Takip.uretim
     
     public partial class UretimMakina : Form
     {
-       
-        
+
+        int urid,musid,uid;
         Modul_Sttok.MayaStokEntities db = new Modul_Sttok.MayaStokEntities();
         public UretimMakina()
         {
@@ -32,7 +32,7 @@ namespace Stok_Takip.uretim
         private void btn_islem_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
                                 
-            int urid = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "UrunID")); 
+            urid = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "UrunID")); 
                       
             Uretim_Makine_Detay umd = new Uretim_Makine_Detay(urid);
 
@@ -53,6 +53,41 @@ namespace Stok_Takip.uretim
             {
                 comboBoxEdit1.Properties.Items.Add(list[x].Urun_Kalite_Kodu);
                 x++;
+            }
+        }
+        int sayi;
+        private void btn_stok_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            
+            uid = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "id"));
+            musid = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MusID"));
+            urid = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "UrunID"));
+            labelControl2.Visible = true;
+            textEdit1.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Adet").ToString();
+            sayi = Convert.ToInt32(textEdit1.Text);
+            textEdit1.Visible = true;
+            
+            simpleButton2.Visible = true;
+            
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
+            if(Convert.ToInt32(textEdit1.Text) < sayi) { 
+            var urt = db.Siparis.Where(w => w.id == uid).FirstOrDefault();
+            var urt2 = db.UretilenUrun.Where(w => w.UrunID == urid && w.MusteriID == musid).FirstOrDefault();                    
+            urt.Adet -= Convert.ToInt32(textEdit1.Text);
+            urt2.Adet += Convert.ToInt32(textEdit1.Text);
+            db.SaveChanges();
+            labelControl2.Visible = false;
+            textEdit1.Visible = false;
+            simpleButton2.Visible = false;
+            simpleButton1.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("Max Adet : " + sayi + " olmalıdır.");
             }
         }
     }

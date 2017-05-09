@@ -12,21 +12,13 @@ namespace Stok_Takip.Modul_Sttok
     using System;
     using System.Collections.Generic;
     
-    public partial class Siparis
+    public partial class UretilenUrun
     {
         public int id { get; set; }
-        public string Siparis_Kodu { get; set; }
         public Nullable<int> MusteriID { get; set; }
         public Nullable<int> UrunID { get; set; }
         public string Musteriadi { get; set; }
         public string Urunadi { get; set; }
-        public Nullable<System.DateTime> SiparisTarihi { get; set; }
-        public Nullable<System.DateTime> TeslimTarihi { get; set; }
         public Nullable<int> Adet { get; set; }
-        public string goster { get; set; }
-        public string stok { get; set; }
-    
-        public virtual Musteri Musteri { get; set; }
-        public virtual UretimBilgi UretimBilgi { get; set; }
     }
 }

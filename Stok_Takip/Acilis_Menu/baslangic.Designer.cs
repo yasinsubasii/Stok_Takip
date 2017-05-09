@@ -53,28 +53,31 @@
             this.k_adi = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.ButGonder = new DevExpress.XtraEditors.SimpleButton();
-            this.TxtRutbe = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtKul = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtMesaj = new System.Windows.Forms.RichTextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TxtMesaj = new System.Windows.Forms.RichTextBox();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.TxtKul = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.TxtRutbe = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.ButGonder = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             ((System.ComponentModel.ISupportInitialize)(ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -90,16 +93,17 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtRutbe.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtKul.Properties)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtKul.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtRutbe.Properties)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon
@@ -117,10 +121,11 @@
             this.barButtonItem4,
             this.barButtonItem5,
             this.barButtonItem6,
-            this.barButtonItem7});
+            this.barButtonItem7,
+            this.barButtonItem8});
             ribbon.Location = new System.Drawing.Point(0, 0);
             ribbon.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            ribbon.MaxItemId = 17;
+            ribbon.MaxItemId = 18;
             ribbon.Name = "ribbon";
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.stok,
@@ -180,7 +185,7 @@
             // 
             // barButtonItem4
             // 
-            this.barButtonItem4.Caption = "ÜRETİMDOLUM";
+            this.barButtonItem4.Caption = "MAKİNA KONTROL";
             this.barButtonItem4.Id = 13;
             this.barButtonItem4.LargeGlyph = global::Stok_Takip.Properties.Resources.GÜNCELLE;
             this.barButtonItem4.Name = "barButtonItem4";
@@ -203,7 +208,7 @@
             // 
             // barButtonItem7
             // 
-            this.barButtonItem7.Caption = "ÜretimMakinalar";
+            this.barButtonItem7.Caption = "MAKİNAKONTROL";
             this.barButtonItem7.Id = 16;
             this.barButtonItem7.LargeGlyph = global::Stok_Takip.Properties.Resources.k_giris;
             this.barButtonItem7.Name = "barButtonItem7";
@@ -240,8 +245,6 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.AllowTextClipping = false;
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.ShowCaptionButton = false;
@@ -266,6 +269,8 @@
             // 
             this.ribbonPage3.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ribbonPage3.Appearance.Options.UseFont = true;
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup4});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "REZERVE";
             // 
@@ -371,162 +376,24 @@
             this.splitContainer2.SplitterDistance = 100;
             this.splitContainer2.TabIndex = 0;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(30, 54);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(447, 301);
-            this.tabControl1.TabIndex = 14;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage1.Controls.Add(this.labelControl1);
-            this.tabPage1.Controls.Add(this.ButGonder);
-            this.tabPage1.Controls.Add(this.TxtRutbe);
-            this.tabPage1.Controls.Add(this.labelControl4);
-            this.tabPage1.Controls.Add(this.TxtKul);
-            this.tabPage1.Controls.Add(this.labelControl3);
-            this.tabPage1.Controls.Add(this.TxtMesaj);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(439, 275);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Mesaj Gönder";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(21, 19);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(29, 13);
-            this.labelControl1.TabIndex = 10;
-            this.labelControl1.Text = "Rütbe";
-            // 
-            // ButGonder
-            // 
-            this.ButGonder.Location = new System.Drawing.Point(20, 238);
-            this.ButGonder.Name = "ButGonder";
-            this.ButGonder.Size = new System.Drawing.Size(101, 23);
-            this.ButGonder.TabIndex = 13;
-            this.ButGonder.Text = "Gönder";
-            this.ButGonder.Click += new System.EventHandler(this.ButGonder_Click);
-            // 
-            // TxtRutbe
-            // 
-            this.TxtRutbe.Location = new System.Drawing.Point(21, 51);
-            this.TxtRutbe.MenuManager = ribbon;
-            this.TxtRutbe.Name = "TxtRutbe";
-            this.TxtRutbe.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TxtRutbe.Properties.Items.AddRange(new object[] {
-            "Depo",
-            "Yönetici",
-            "Satış"});
-            this.TxtRutbe.Size = new System.Drawing.Size(100, 20);
-            this.TxtRutbe.TabIndex = 7;
-            this.TxtRutbe.SelectedIndexChanged += new System.EventHandler(this.TxtRutbe_SelectedIndexChanged);
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(21, 83);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(39, 13);
-            this.labelControl4.TabIndex = 12;
-            this.labelControl4.Text = "MESAJ :";
-            // 
-            // TxtKul
-            // 
-            this.TxtKul.Location = new System.Drawing.Point(150, 51);
-            this.TxtKul.MenuManager = ribbon;
-            this.TxtKul.Name = "TxtKul";
-            this.TxtKul.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TxtKul.Size = new System.Drawing.Size(100, 20);
-            this.TxtKul.TabIndex = 8;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(150, 19);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(37, 13);
-            this.labelControl3.TabIndex = 11;
-            this.labelControl3.Text = "Kullanıcı";
-            // 
-            // TxtMesaj
-            // 
-            this.TxtMesaj.Location = new System.Drawing.Point(21, 102);
-            this.TxtMesaj.Name = "TxtMesaj";
-            this.TxtMesaj.Size = new System.Drawing.Size(319, 98);
-            this.TxtMesaj.TabIndex = 9;
-            this.TxtMesaj.Text = "";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.gridControl1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(439, 275);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Gönderilenler";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 3);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = ribbon;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(433, 269);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Gönderen";
-            this.gridColumn1.FieldName = "Gonderenadi";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.ReadOnly = true;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Gönderilen";
-            this.gridColumn2.FieldName = "Alanadi";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.ReadOnly = true;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Mesaj";
-            this.gridColumn3.FieldName = "Text";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.ReadOnly = true;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem8);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "HAZIR-ÜRÜNLER";
+            this.barButtonItem8.Glyph = global::Stok_Takip.Properties.Resources.GÜNCELLE;
+            this.barButtonItem8.Id = 17;
+            this.barButtonItem8.LargeGlyph = global::Stok_Takip.Properties.Resources.GÜNCELLE;
+            this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // tabPage3
             // 
@@ -534,7 +401,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(439, 275);
+            this.tabPage3.Size = new System.Drawing.Size(1094, 659);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Gelenler";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -546,10 +413,20 @@
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.MenuManager = ribbon;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(433, 269);
+            this.gridControl2.Size = new System.Drawing.Size(1088, 653);
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridView2
             // 
@@ -587,6 +464,158 @@
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.gridControl1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1094, 659);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Gönderilenler";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(3, 3);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.MenuManager = ribbon;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1088, 653);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView3
+            // 
+            this.gridView3.GridControl = this.gridControl1;
+            this.gridView3.Name = "gridView3";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Gönderen";
+            this.gridColumn1.FieldName = "Gonderenadi";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Gönderilen";
+            this.gridColumn2.FieldName = "Alanadi";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Mesaj";
+            this.gridColumn3.FieldName = "Text";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage1.Controls.Add(this.labelControl1);
+            this.tabPage1.Controls.Add(this.ButGonder);
+            this.tabPage1.Controls.Add(this.TxtRutbe);
+            this.tabPage1.Controls.Add(this.labelControl4);
+            this.tabPage1.Controls.Add(this.TxtKul);
+            this.tabPage1.Controls.Add(this.labelControl3);
+            this.tabPage1.Controls.Add(this.TxtMesaj);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1094, 659);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Mesaj Gönder";
+            // 
+            // TxtMesaj
+            // 
+            this.TxtMesaj.Location = new System.Drawing.Point(21, 102);
+            this.TxtMesaj.Name = "TxtMesaj";
+            this.TxtMesaj.Size = new System.Drawing.Size(319, 98);
+            this.TxtMesaj.TabIndex = 9;
+            this.TxtMesaj.Text = "";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(150, 19);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(37, 13);
+            this.labelControl3.TabIndex = 11;
+            this.labelControl3.Text = "Kullanıcı";
+            // 
+            // TxtKul
+            // 
+            this.TxtKul.Location = new System.Drawing.Point(150, 51);
+            this.TxtKul.MenuManager = ribbon;
+            this.TxtKul.Name = "TxtKul";
+            this.TxtKul.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TxtKul.Size = new System.Drawing.Size(100, 20);
+            this.TxtKul.TabIndex = 8;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(21, 83);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(39, 13);
+            this.labelControl4.TabIndex = 12;
+            this.labelControl4.Text = "MESAJ :";
+            // 
+            // TxtRutbe
+            // 
+            this.TxtRutbe.Location = new System.Drawing.Point(21, 51);
+            this.TxtRutbe.MenuManager = ribbon;
+            this.TxtRutbe.Name = "TxtRutbe";
+            this.TxtRutbe.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TxtRutbe.Properties.Items.AddRange(new object[] {
+            "Depo",
+            "Yönetici",
+            "Satış"});
+            this.TxtRutbe.Size = new System.Drawing.Size(100, 20);
+            this.TxtRutbe.TabIndex = 7;
+            this.TxtRutbe.SelectedIndexChanged += new System.EventHandler(this.TxtRutbe_SelectedIndexChanged);
+            // 
+            // ButGonder
+            // 
+            this.ButGonder.Location = new System.Drawing.Point(20, 238);
+            this.ButGonder.Name = "ButGonder";
+            this.ButGonder.Size = new System.Drawing.Size(101, 23);
+            this.ButGonder.TabIndex = 13;
+            this.ButGonder.Text = "Gönder";
+            this.ButGonder.Click += new System.EventHandler(this.ButGonder_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(21, 19);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(29, 13);
+            this.labelControl1.TabIndex = 10;
+            this.labelControl1.Text = "Rütbe";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1102, 685);
+            this.tabControl1.TabIndex = 14;
+            // 
             // baslangic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -613,17 +642,18 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtRutbe.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtKul.Properties)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtKul.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtRutbe.Properties)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -655,15 +685,17 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraEditors.SimpleButton btnsifre;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.RichTextBox TxtMesaj;
-        private DevExpress.XtraEditors.ComboBoxEdit TxtKul;
-        private DevExpress.XtraEditors.ComboBoxEdit TxtRutbe;
-        private DevExpress.XtraEditors.SimpleButton ButGonder;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton ButGonder;
+        private DevExpress.XtraEditors.ComboBoxEdit TxtRutbe;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.ComboBoxEdit TxtKul;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.RichTextBox TxtMesaj;
         private System.Windows.Forms.TabPage tabPage2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -676,5 +708,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
     }
 }

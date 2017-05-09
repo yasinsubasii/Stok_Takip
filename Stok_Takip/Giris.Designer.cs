@@ -69,7 +69,7 @@
             // 
             // K_adi
             // 
-            this.K_adi.EditValue = "aykt";
+            this.K_adi.EditValue = "Yasin";
             this.K_adi.Location = new System.Drawing.Point(107, 62);
             this.K_adi.Name = "K_adi";
             this.K_adi.Size = new System.Drawing.Size(150, 20);
@@ -77,7 +77,7 @@
             // 
             // Sifre
             // 
-            this.Sifre.EditValue = "12345";
+            this.Sifre.EditValue = "123456";
             this.Sifre.Location = new System.Drawing.Point(107, 146);
             this.Sifre.Name = "Sifre";
             this.Sifre.Size = new System.Drawing.Size(150, 20);

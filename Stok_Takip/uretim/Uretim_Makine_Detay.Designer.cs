@@ -139,6 +139,7 @@
             // 
             // Urun_Kalite_Kodu_txt
             // 
+            this.Urun_Kalite_Kodu_txt.Enabled = false;
             this.Urun_Kalite_Kodu_txt.Location = new System.Drawing.Point(166, 54);
             this.Urun_Kalite_Kodu_txt.Name = "Urun_Kalite_Kodu_txt";
             this.Urun_Kalite_Kodu_txt.Size = new System.Drawing.Size(161, 20);
@@ -154,6 +155,7 @@
             // 
             // SERİSİ_TXT
             // 
+            this.SERİSİ_TXT.Enabled = false;
             this.SERİSİ_TXT.Location = new System.Drawing.Point(166, 90);
             this.SERİSİ_TXT.Name = "SERİSİ_TXT";
             this.SERİSİ_TXT.Size = new System.Drawing.Size(161, 20);
@@ -169,6 +171,7 @@
             // 
             // Uretimithal_txt
             // 
+            this.Uretimithal_txt.Enabled = false;
             this.Uretimithal_txt.Location = new System.Drawing.Point(166, 128);
             this.Uretimithal_txt.Name = "Uretimithal_txt";
             this.Uretimithal_txt.Size = new System.Drawing.Size(161, 20);
@@ -184,6 +187,7 @@
             // 
             // DolumYeri_txt
             // 
+            this.DolumYeri_txt.Enabled = false;
             this.DolumYeri_txt.Location = new System.Drawing.Point(166, 163);
             this.DolumYeri_txt.Name = "DolumYeri_txt";
             this.DolumYeri_txt.Size = new System.Drawing.Size(161, 20);
@@ -199,6 +203,7 @@
             // 
             // Urun_Ismi_txt
             // 
+            this.Urun_Ismi_txt.Enabled = false;
             this.Urun_Ismi_txt.Location = new System.Drawing.Point(166, 199);
             this.Urun_Ismi_txt.Name = "Urun_Ismi_txt";
             this.Urun_Ismi_txt.Size = new System.Drawing.Size(161, 20);
@@ -214,6 +219,7 @@
             // 
             // Genislik_txt
             // 
+            this.Genislik_txt.Enabled = false;
             this.Genislik_txt.Location = new System.Drawing.Point(166, 234);
             this.Genislik_txt.Name = "Genislik_txt";
             this.Genislik_txt.Size = new System.Drawing.Size(161, 20);
@@ -229,6 +235,7 @@
             // 
             // YUKSEKLİK_txt
             // 
+            this.YUKSEKLİK_txt.Enabled = false;
             this.YUKSEKLİK_txt.Location = new System.Drawing.Point(166, 271);
             this.YUKSEKLİK_txt.Name = "YUKSEKLİK_txt";
             this.YUKSEKLİK_txt.Size = new System.Drawing.Size(161, 20);
@@ -244,6 +251,7 @@
             // 
             // koruk_txt
             // 
+            this.koruk_txt.Enabled = false;
             this.koruk_txt.Location = new System.Drawing.Point(166, 310);
             this.koruk_txt.Name = "koruk_txt";
             this.koruk_txt.Size = new System.Drawing.Size(161, 20);
@@ -259,6 +267,7 @@
             // 
             // EnKare_txt
             // 
+            this.EnKare_txt.Enabled = false;
             this.EnKare_txt.Location = new System.Drawing.Point(166, 348);
             this.EnKare_txt.Name = "EnKare_txt";
             this.EnKare_txt.Size = new System.Drawing.Size(161, 20);
@@ -274,6 +283,7 @@
             // 
             // BoyKare_txt
             // 
+            this.BoyKare_txt.Enabled = false;
             this.BoyKare_txt.Location = new System.Drawing.Point(166, 388);
             this.BoyKare_txt.Name = "BoyKare_txt";
             this.BoyKare_txt.Size = new System.Drawing.Size(161, 20);
@@ -289,6 +299,7 @@
             // 
             // KareSayisi_txt
             // 
+            this.KareSayisi_txt.Enabled = false;
             this.KareSayisi_txt.Location = new System.Drawing.Point(166, 427);
             this.KareSayisi_txt.Name = "KareSayisi_txt";
             this.KareSayisi_txt.Size = new System.Drawing.Size(161, 20);
@@ -304,6 +315,7 @@
             // 
             // DolumSekli_txt
             // 
+            this.DolumSekli_txt.Enabled = false;
             this.DolumSekli_txt.Location = new System.Drawing.Point(166, 472);
             this.DolumSekli_txt.Name = "DolumSekli_txt";
             this.DolumSekli_txt.Size = new System.Drawing.Size(161, 20);
@@ -319,6 +331,7 @@
             // 
             // Biye_txt
             // 
+            this.Biye_txt.Enabled = false;
             this.Biye_txt.Location = new System.Drawing.Point(515, 45);
             this.Biye_txt.Name = "Biye_txt";
             this.Biye_txt.Size = new System.Drawing.Size(163, 20);
@@ -335,6 +348,7 @@
             // 
             // Kumas_txt
             // 
+            this.Kumas_txt.Enabled = false;
             this.Kumas_txt.Location = new System.Drawing.Point(515, 81);
             this.Kumas_txt.Name = "Kumas_txt";
             this.Kumas_txt.Size = new System.Drawing.Size(163, 20);
@@ -350,6 +364,7 @@
             // 
             // Dolgu_txt
             // 
+            this.Dolgu_txt.Enabled = false;
             this.Dolgu_txt.Location = new System.Drawing.Point(515, 118);
             this.Dolgu_txt.Name = "Dolgu_txt";
             this.Dolgu_txt.Size = new System.Drawing.Size(163, 20);
@@ -365,6 +380,7 @@
             // 
             // DolguMetaryali_txt
             // 
+            this.DolguMetaryali_txt.Enabled = false;
             this.DolguMetaryali_txt.Location = new System.Drawing.Point(515, 153);
             this.DolguMetaryali_txt.Name = "DolguMetaryali_txt";
             this.DolguMetaryali_txt.Size = new System.Drawing.Size(163, 20);
@@ -380,6 +396,7 @@
             // 
             // DolguMetrekare_txt
             // 
+            this.DolguMetrekare_txt.Enabled = false;
             this.DolguMetrekare_txt.Location = new System.Drawing.Point(515, 190);
             this.DolguMetrekare_txt.Name = "DolguMetrekare_txt";
             this.DolguMetrekare_txt.Size = new System.Drawing.Size(163, 20);
@@ -395,6 +412,7 @@
             // 
             // İcDolgu_txt
             // 
+            this.İcDolgu_txt.Enabled = false;
             this.İcDolgu_txt.Location = new System.Drawing.Point(515, 234);
             this.İcDolgu_txt.Name = "İcDolgu_txt";
             this.İcDolgu_txt.Size = new System.Drawing.Size(163, 20);
@@ -410,6 +428,7 @@
             // 
             // DisDolgu_txt
             // 
+            this.DisDolgu_txt.Enabled = false;
             this.DisDolgu_txt.Location = new System.Drawing.Point(515, 271);
             this.DisDolgu_txt.Name = "DisDolgu_txt";
             this.DisDolgu_txt.Size = new System.Drawing.Size(163, 20);
@@ -425,6 +444,7 @@
             // 
             // KesimOlcutu_txt
             // 
+            this.KesimOlcutu_txt.Enabled = false;
             this.KesimOlcutu_txt.Location = new System.Drawing.Point(515, 310);
             this.KesimOlcutu_txt.Name = "KesimOlcutu_txt";
             this.KesimOlcutu_txt.Size = new System.Drawing.Size(163, 20);
@@ -440,6 +460,7 @@
             // 
             // MarkaEtiketi_txt
             // 
+            this.MarkaEtiketi_txt.Enabled = false;
             this.MarkaEtiketi_txt.Location = new System.Drawing.Point(515, 348);
             this.MarkaEtiketi_txt.Name = "MarkaEtiketi_txt";
             this.MarkaEtiketi_txt.Size = new System.Drawing.Size(163, 20);
@@ -455,6 +476,7 @@
             // 
             // NomiteEtiket_txt
             // 
+            this.NomiteEtiket_txt.Enabled = false;
             this.NomiteEtiket_txt.Location = new System.Drawing.Point(515, 388);
             this.NomiteEtiket_txt.Name = "NomiteEtiket_txt";
             this.NomiteEtiket_txt.Size = new System.Drawing.Size(163, 20);
@@ -470,6 +492,7 @@
             // 
             // UrunYikamaEtiketi_txt
             // 
+            this.UrunYikamaEtiketi_txt.Enabled = false;
             this.UrunYikamaEtiketi_txt.Location = new System.Drawing.Point(515, 427);
             this.UrunYikamaEtiketi_txt.Name = "UrunYikamaEtiketi_txt";
             this.UrunYikamaEtiketi_txt.Size = new System.Drawing.Size(163, 20);
@@ -485,6 +508,7 @@
             // 
             // KoseEtiketi_txt
             // 
+            this.KoseEtiketi_txt.Enabled = false;
             this.KoseEtiketi_txt.Location = new System.Drawing.Point(515, 462);
             this.KoseEtiketi_txt.Name = "KoseEtiketi_txt";
             this.KoseEtiketi_txt.Size = new System.Drawing.Size(163, 20);
@@ -500,6 +524,7 @@
             // 
             // Canta_txt
             // 
+            this.Canta_txt.Enabled = false;
             this.Canta_txt.Location = new System.Drawing.Point(880, 35);
             this.Canta_txt.Name = "Canta_txt";
             this.Canta_txt.Size = new System.Drawing.Size(163, 20);
@@ -515,6 +540,7 @@
             // 
             // Urun_txt
             // 
+            this.Urun_txt.Enabled = false;
             this.Urun_txt.Location = new System.Drawing.Point(880, 70);
             this.Urun_txt.Name = "Urun_txt";
             this.Urun_txt.Size = new System.Drawing.Size(163, 20);
@@ -530,6 +556,7 @@
             // 
             // Paketleme_txt
             // 
+            this.Paketleme_txt.Enabled = false;
             this.Paketleme_txt.Location = new System.Drawing.Point(880, 109);
             this.Paketleme_txt.Name = "Paketleme_txt";
             this.Paketleme_txt.Size = new System.Drawing.Size(163, 20);
@@ -545,6 +572,7 @@
             // 
             // TozTorbasi_txt
             // 
+            this.TozTorbasi_txt.Enabled = false;
             this.TozTorbasi_txt.Location = new System.Drawing.Point(880, 144);
             this.TozTorbasi_txt.Name = "TozTorbasi_txt";
             this.TozTorbasi_txt.Size = new System.Drawing.Size(163, 20);
@@ -560,6 +588,7 @@
             // 
             // Foy_txt
             // 
+            this.Foy_txt.Enabled = false;
             this.Foy_txt.Location = new System.Drawing.Point(880, 180);
             this.Foy_txt.Name = "Foy_txt";
             this.Foy_txt.Size = new System.Drawing.Size(163, 20);
@@ -575,6 +604,7 @@
             // 
             // kimble_txt
             // 
+            this.kimble_txt.Enabled = false;
             this.kimble_txt.Location = new System.Drawing.Point(880, 225);
             this.kimble_txt.Name = "kimble_txt";
             this.kimble_txt.Size = new System.Drawing.Size(163, 20);
@@ -590,6 +620,7 @@
             // 
             // agirlik_txt
             // 
+            this.agirlik_txt.Enabled = false;
             this.agirlik_txt.Location = new System.Drawing.Point(880, 262);
             this.agirlik_txt.Name = "agirlik_txt";
             this.agirlik_txt.Size = new System.Drawing.Size(163, 20);
@@ -605,6 +636,7 @@
             // 
             // ic_dis_agirlik_txt
             // 
+            this.ic_dis_agirlik_txt.Enabled = false;
             this.ic_dis_agirlik_txt.Location = new System.Drawing.Point(880, 300);
             this.ic_dis_agirlik_txt.Name = "ic_dis_agirlik_txt";
             this.ic_dis_agirlik_txt.Size = new System.Drawing.Size(163, 20);
@@ -620,12 +652,13 @@
             // 
             // birim_urun_biye_txt
             // 
+            this.birim_urun_biye_txt.Enabled = false;
             this.birim_urun_biye_txt.Location = new System.Drawing.Point(880, 339);
             this.birim_urun_biye_txt.Name = "birim_urun_biye_txt";
             this.birim_urun_biye_txt.Size = new System.Drawing.Size(163, 20);
             this.birim_urun_biye_txt.TabIndex = 1;
             // 
-            // SiparisDetay
+            // Uretim_Makine_Detay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -696,7 +729,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.Urun_Kalite_Kodu_txt);
             this.Controls.Add(this.labelControl1);
-            this.Name = "SiparisDetay";
+            this.Name = "Uretim_Makine_Detay";
             this.Text = "SiparisDetay";
             this.Load += new System.EventHandler(this.Uretim_Makine_Detay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Urun_Kalite_Kodu_txt.Properties)).EndInit();

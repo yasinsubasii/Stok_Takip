@@ -28,126 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.mayaStokDataSet11 = new Stok_Takip.MayaStokDataSet1();
-            this.mayaStokDataSet = new Stok_Takip.MayaStokDataSet();
-            this.urunlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.urunlerTableAdapter = new Stok_Takip.MayaStokDataSetTableAdapters.UrunlerTableAdapter();
-            this.mayaStokDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mayaStokDataSet1 = new Stok_Takip.MayaStokDataSet1();
-            this.siparisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siparisTableAdapter = new Stok_Takip.MayaStokDataSet1TableAdapters.SiparisTableAdapter();
-            this.mayaStokDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siparisBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.siparisBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.siparisTableAdapter1 = new Stok_Takip.MayaStokDataSet1TableAdapters.SiparisTableAdapter();
-            this.button_goster = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridButon = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.mayaStokDataSet2 = new Stok_Takip.MayaStokDataSet2();
-            this.siparisBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.siparisTableAdapter2 = new Stok_Takip.MayaStokDataSet2TableAdapters.SiparisTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siparisBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siparisBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siparisBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_goster)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btngoster = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siparisBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btngoster)).BeginInit();
             this.SuspendLayout();
             // 
-            // mayaStokDataSet11
+            // gridControl1
             // 
-            this.mayaStokDataSet11.DataSetName = "MayaStokDataSet1";
-            this.mayaStokDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mayaStokDataSet
-            // 
-            this.mayaStokDataSet.DataSetName = "MayaStokDataSet";
-            this.mayaStokDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // urunlerBindingSource
-            // 
-            this.urunlerBindingSource.DataMember = "Urunler";
-            this.urunlerBindingSource.DataSource = this.mayaStokDataSet;
-            // 
-            // urunlerTableAdapter
-            // 
-            this.urunlerTableAdapter.ClearBeforeFill = true;
-            // 
-            // mayaStokDataSetBindingSource
-            // 
-            this.mayaStokDataSetBindingSource.DataSource = this.mayaStokDataSet;
-            this.mayaStokDataSetBindingSource.Position = 0;
-            // 
-            // mayaStokDataSet1
-            // 
-            this.mayaStokDataSet1.DataSetName = "MayaStokDataSet1";
-            this.mayaStokDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // siparisBindingSource
-            // 
-            this.siparisBindingSource.DataMember = "Siparis";
-            this.siparisBindingSource.DataSource = this.mayaStokDataSet1;
-            // 
-            // siparisTableAdapter
-            // 
-            this.siparisTableAdapter.ClearBeforeFill = true;
-            // 
-            // mayaStokDataSet1BindingSource
-            // 
-            this.mayaStokDataSet1BindingSource.DataSource = this.mayaStokDataSet1;
-            this.mayaStokDataSet1BindingSource.Position = 0;
-            // 
-            // siparisBindingSource1
-            // 
-            this.siparisBindingSource1.DataMember = "Siparis";
-            this.siparisBindingSource1.DataSource = this.mayaStokDataSet1BindingSource;
-            // 
-            // siparisBindingSource2
-            // 
-            this.siparisBindingSource2.DataMember = "Siparis";
-            this.siparisBindingSource2.DataSource = this.mayaStokDataSet1BindingSource;
-            // 
-            // siparisTableAdapter1
-            // 
-            this.siparisTableAdapter1.ClearBeforeFill = true;
-            // 
-            // button_goster
-            // 
-            this.button_goster.AutoHeight = false;
-            this.button_goster.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::Stok_Takip.Properties.Resources.Text_Edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.button_goster.Name = "button_goster";
-            this.button_goster.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.button_goster.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.button_goster_ButtonClick);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btngoster});
+            this.gridControl1.Size = new System.Drawing.Size(831, 557);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
             this.gridColumn6,
-            this.gridButon});
+            this.gridColumn7});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "Sipariş Kodu";
+            this.gridColumn1.Caption = "SİPARİŞ KODU";
             this.gridColumn1.FieldName = "Siparis_Kodu";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
@@ -155,56 +81,57 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "Sipariş Tarihi";
-            this.gridColumn2.FieldName = "SiparisTarihi";
+            this.gridColumn2.Caption = "MÜSTERİ ADI";
+            this.gridColumn2.FieldName = "Müsteriadi";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "ÜRÜN ADI";
+            this.gridColumn3.FieldName = "Urunadi";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "SİPARİŞ TARİHİ";
+            this.gridColumn4.FieldName = "SiparisTarihi";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "TESLİM TARİHİ";
+            this.gridColumn5.FieldName = "TeslimTarihi";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "Teslim Tarihi";
-            this.gridColumn6.FieldName = "TeslimTarihi";
+            this.gridColumn6.Caption = "ADET";
+            this.gridColumn6.FieldName = "Adet";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 2;
+            this.gridColumn6.VisibleIndex = 5;
             // 
-            // gridButon
+            // gridColumn7
             // 
-            this.gridButon.Caption = "btn_goster";
-            this.gridButon.ColumnEdit = this.button_goster;
-            this.gridButon.FieldName = "goster";
-            this.gridButon.Name = "gridButon";
-            this.gridButon.Visible = true;
-            this.gridButon.VisibleIndex = 3;
+            this.gridColumn7.Caption = "GÖSTER";
+            this.gridColumn7.ColumnEdit = this.btngoster;
+            this.gridColumn7.Name = "gridColumn7";
             // 
-            // gridControl1
+            // btngoster
             // 
-            this.gridControl1.DataSource = this.siparisBindingSource3;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.button_goster});
-            this.gridControl1.Size = new System.Drawing.Size(831, 557);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // mayaStokDataSet2
-            // 
-            this.mayaStokDataSet2.DataSetName = "MayaStokDataSet2";
-            this.mayaStokDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // siparisBindingSource3
-            // 
-            this.siparisBindingSource3.DataMember = "Siparis";
-            this.siparisBindingSource3.DataSource = this.mayaStokDataSet2;
-            // 
-            // siparisTableAdapter2
-            // 
-            this.siparisTableAdapter2.ClearBeforeFill = true;
+            this.btngoster.AutoHeight = false;
+            this.btngoster.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::Stok_Takip.Properties.Resources.GİRİS, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btngoster.Name = "btngoster";
+            this.btngoster.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btngoster_ButtonClick);
             // 
             // Siparis_Durum
             // 
@@ -215,46 +142,24 @@
             this.Name = "Siparis_Durum";
             this.Text = "Siparis_Durum";
             this.Load += new System.EventHandler(this.Siparis_Durum_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siparisBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siparisBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siparisBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_goster)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mayaStokDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siparisBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btngoster)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private MayaStokDataSet mayaStokDataSet;
-        private System.Windows.Forms.BindingSource urunlerBindingSource;
-        private MayaStokDataSetTableAdapters.UrunlerTableAdapter urunlerTableAdapter;
-        private System.Windows.Forms.BindingSource mayaStokDataSetBindingSource;
-        private MayaStokDataSet1 mayaStokDataSet1;
-        private System.Windows.Forms.BindingSource siparisBindingSource;
-        private MayaStokDataSet1TableAdapters.SiparisTableAdapter siparisTableAdapter;
-        private System.Windows.Forms.BindingSource siparisBindingSource2;
-        private System.Windows.Forms.BindingSource mayaStokDataSet1BindingSource;
-        private System.Windows.Forms.BindingSource siparisBindingSource1;
-        private MayaStokDataSet1 mayaStokDataSet11;
-        private MayaStokDataSet1TableAdapters.SiparisTableAdapter siparisTableAdapter1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit button_goster;
+
+        private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridButon;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private MayaStokDataSet2 mayaStokDataSet2;
-        private System.Windows.Forms.BindingSource siparisBindingSource3;
-        private MayaStokDataSet2TableAdapters.SiparisTableAdapter siparisTableAdapter2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btngoster;
     }
 }

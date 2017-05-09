@@ -16,6 +16,7 @@ namespace Stok_Takip
     {
         Modul_Sttok.MayaStokEntities db;
         Modul_Sttok.Siparis spr;
+        Modul_Sttok.UretilenUrun uurn;
         Modul_Sttok.Musteri mst;
         Modul_Sttok.UretimBilgi urt;
         public siparis()
@@ -32,13 +33,23 @@ namespace Stok_Takip
             spr = new Modul_Sttok.Siparis();
             spr.MusteriID = musteriid[idm];
             spr.UrunID = Urunid[idu];
+            spr.Adet = Convert.ToInt32(txt_Miktar.Text);
             spr.Urunadi = txt_Urun_Adi.Text;
             spr.Musteriadi = txt_Müsteri_Adi.Text;
             spr.Siparis_Kodu = "KD_" + Urunid[idu].ToString();
             spr.TeslimTarihi = Convert.ToDateTime(dateTimeTeslimat.Text);
             spr.SiparisTarihi = DateTime.Today;
             db.Siparis.Add(spr);
+
+            uurn = new Modul_Sttok.UretilenUrun();
+            uurn.MusteriID = musteriid[idm];
+            uurn.UrunID = Urunid[idu];
+            uurn.Adet = 0;
+            uurn.Urunadi = txt_Urun_Adi.Text;
+            uurn.Musteriadi = txt_Müsteri_Adi.Text;
+            db.UretilenUrun.Add(uurn);
             db.SaveChanges();
+
             this.Hide();
             MessageBox.Show("Kayıt yapılmıştır");
         }

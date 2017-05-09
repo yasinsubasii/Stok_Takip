@@ -43,6 +43,7 @@ namespace Stok_Takip
                     Fonksiyonlar.Rutbe.id = prs.id;
                     Acilis_Menu.baslangic my = new Acilis_Menu.baslangic();
                     my.Show();
+                    this.Hide();
                 }
                 else if (prs.Yetki == "Yönetici")
                 {
@@ -50,6 +51,7 @@ namespace Stok_Takip
                     Fonksiyonlar.Rutbe.id = prs.id;
                     Acilis_Menu.baslangic my = new Acilis_Menu.baslangic();
                     my.Show();
+                    this.Hide();
                 }
                 else
                 {

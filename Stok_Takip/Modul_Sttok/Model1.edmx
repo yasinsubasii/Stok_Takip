@@ -75,6 +75,7 @@
           <Property Name="TeslimTarihi" Type="datetime" />
           <Property Name="Adet" Type="int" />
           <Property Name="goster" Type="nvarchar" MaxLength="50" />
+          <Property Name="stok" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Tur">
           <Key>
@@ -89,6 +90,17 @@
           <Property Name="Rezerve" Type="nvarchar" MaxLength="50" />
           <Property Name="Uretilen" Type="int" />
           <Property Name="Kalan" Type="int" />
+        </EntityType>
+        <EntityType Name="UretilenUrun">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MusteriID" Type="int" />
+          <Property Name="UrunID" Type="int" />
+          <Property Name="Musteriadi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Urunadi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adet" Type="int" />
         </EntityType>
         <EntityType Name="UretimBilgi">
           <Key>
@@ -233,6 +245,7 @@
           <EntitySet Name="Personel" EntityType="Self.Personel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Siparis" EntityType="Self.Siparis" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tur" EntityType="Self.Tur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UretilenUrun" EntityType="Self.UretilenUrun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UretimBilgi" EntityType="Self.UretimBilgi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urunler" EntityType="Self.Urunler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Üretim_Dikim" EntityType="Self.Üretim_Dikim" Schema="dbo" store:Type="Tables" />
@@ -265,6 +278,7 @@
           <EntitySet Name="Personel" EntityType="MayaStokModel.Personel" />
           <EntitySet Name="Siparis" EntityType="MayaStokModel.Siparis" />
           <EntitySet Name="Tur" EntityType="MayaStokModel.Tur" />
+          <EntitySet Name="UretilenUrun" EntityType="MayaStokModel.UretilenUrun" />
           <EntitySet Name="UretimBilgi" EntityType="MayaStokModel.UretimBilgi" />
           <EntitySet Name="Urunler" EntityType="MayaStokModel.Urunler" />
           <EntitySet Name="Üretim_Dikim" EntityType="MayaStokModel.Üretim_Dikim" />
@@ -356,6 +370,7 @@
           <Property Name="TeslimTarihi" Type="DateTime" Precision="3" />
           <Property Name="Adet" Type="Int32" />
           <Property Name="goster" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="stok" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Musteri" Relationship="MayaStokModel.FK_Siparis_Musteri" FromRole="Siparis" ToRole="Musteri" />
           <NavigationProperty Name="UretimBilgi" Relationship="MayaStokModel.FK_Siparis_UretimBilgi" FromRole="Siparis" ToRole="UretimBilgi" />
         </EntityType>
@@ -373,6 +388,17 @@
           <Property Name="Uretilen" Type="Int32" />
           <Property Name="Kalan" Type="Int32" />
           <NavigationProperty Name="Urunler" Relationship="MayaStokModel.FK_Tur_Urunler" FromRole="Tur" ToRole="Urunler" />
+        </EntityType>
+        <EntityType Name="UretilenUrun">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MusteriID" Type="Int32" />
+          <Property Name="UrunID" Type="Int32" />
+          <Property Name="Musteriadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Urunadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adet" Type="Int32" />
         </EntityType>
         <EntityType Name="UretimBilgi">
           <Key>
@@ -583,6 +609,7 @@
           <EntitySetMapping Name="Siparis">
             <EntityTypeMapping TypeName="MayaStokModel.Siparis">
               <MappingFragment StoreEntitySet="Siparis">
+                <ScalarProperty Name="stok" ColumnName="stok" />
                 <ScalarProperty Name="goster" ColumnName="goster" />
                 <ScalarProperty Name="Adet" ColumnName="Adet" />
                 <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
@@ -607,6 +634,18 @@
                 <ScalarProperty Name="Genislik" ColumnName="Genislik" />
                 <ScalarProperty Name="Renk" ColumnName="Renk" />
                 <ScalarProperty Name="Adi" ColumnName="Adi" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UretilenUrun">
+            <EntityTypeMapping TypeName="MayaStokModel.UretilenUrun">
+              <MappingFragment StoreEntitySet="UretilenUrun">
+                <ScalarProperty Name="Adet" ColumnName="Adet" />
+                <ScalarProperty Name="Urunadi" ColumnName="Urunadi" />
+                <ScalarProperty Name="Musteriadi" ColumnName="Musteriadi" />
+                <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+                <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
