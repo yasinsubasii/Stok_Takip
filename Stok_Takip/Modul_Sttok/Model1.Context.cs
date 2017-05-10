@@ -35,6 +35,5 @@ namespace Stok_Takip.Modul_Sttok
         public virtual DbSet<UretilenUrun> UretilenUrun { get; set; }
         public virtual DbSet<UretimBilgi> UretimBilgi { get; set; }
         public virtual DbSet<Urunler> Urunler { get; set; }
-        public virtual DbSet<Üretim_Dikim> Üretim_Dikim { get; set; }
     }
 }

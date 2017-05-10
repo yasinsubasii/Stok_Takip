@@ -71,6 +71,7 @@
           <Property Name="UrunID" Type="int" />
           <Property Name="Musteriadi" Type="nvarchar" MaxLength="50" />
           <Property Name="Urunadi" Type="nvarchar" MaxLength="50" />
+          <Property Name="DolumYeri" Type="nvarchar" MaxLength="50" />
           <Property Name="SiparisTarihi" Type="datetime" />
           <Property Name="TeslimTarihi" Type="datetime" />
           <Property Name="Adet" Type="int" />
@@ -162,31 +163,6 @@
           <Property Name="Yukseklik" Type="nvarchar" MaxLength="50" />
           <Property Name="Güncelle" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="Üretim_Dikim">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Urun_Kod" Type="nvarchar" MaxLength="50" />
-          <Property Name="Musteri" Type="nvarchar" MaxLength="50" />
-          <Property Name="Siparis_Tipi" Type="nvarchar" MaxLength="50" />
-          <Property Name="Siparis_Miktari" Type="nvarchar" MaxLength="50" />
-          <Property Name="Urun_Adi" Type="nvarchar" MaxLength="50" />
-          <Property Name="Proses_Adi" Type="nvarchar" MaxLength="50" />
-          <Property Name="Genislik" Type="nvarchar" MaxLength="50" />
-          <Property Name="Yukseklik" Type="nvarchar" MaxLength="50" />
-          <Property Name="Kesim_Olcusu_Genislik" Type="nvarchar" MaxLength="50" />
-          <Property Name="Kesim_Olcusu_Yukseklik" Type="nvarchar" MaxLength="50" />
-          <Property Name="Kumas" Type="nvarchar" MaxLength="50" />
-          <Property Name="Biye" Type="nvarchar" MaxLength="50" />
-          <Property Name="Kılıf" Type="nvarchar" MaxLength="50" />
-          <Property Name="Kose_Etiketi" Type="nvarchar" MaxLength="50" />
-          <Property Name="Koruk" Type="nvarchar" MaxLength="50" />
-          <Property Name="Dolum_Sekli" Type="nvarchar" MaxLength="50" />
-          <Property Name="Siparis_Giris_Tarihi" Type="datetime" />
-          <Property Name="Kesim_Termin_Tarihi" Type="datetime" />
-          <Property Name="Acıklama" Type="nvarchar" MaxLength="50" />
-        </EntityType>
         <Association Name="FK_Siparis_Musteri">
           <End Role="Musteri" Type="Self.Musteri" Multiplicity="0..1" />
           <End Role="Siparis" Type="Self.Siparis" Multiplicity="*" />
@@ -248,7 +224,6 @@
           <EntitySet Name="UretilenUrun" EntityType="Self.UretilenUrun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UretimBilgi" EntityType="Self.UretimBilgi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urunler" EntityType="Self.Urunler" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Üretim_Dikim" EntityType="Self.Üretim_Dikim" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Siparis_Musteri" Association="Self.FK_Siparis_Musteri">
             <End Role="Musteri" EntitySet="Musteri" />
             <End Role="Siparis" EntitySet="Siparis" />
@@ -281,7 +256,6 @@
           <EntitySet Name="UretilenUrun" EntityType="MayaStokModel.UretilenUrun" />
           <EntitySet Name="UretimBilgi" EntityType="MayaStokModel.UretimBilgi" />
           <EntitySet Name="Urunler" EntityType="MayaStokModel.Urunler" />
-          <EntitySet Name="Üretim_Dikim" EntityType="MayaStokModel.Üretim_Dikim" />
           <AssociationSet Name="FK_Siparis_Musteri" Association="MayaStokModel.FK_Siparis_Musteri">
             <End Role="Musteri" EntitySet="Musteri" />
             <End Role="Siparis" EntitySet="Siparis" />
@@ -366,6 +340,7 @@
           <Property Name="UrunID" Type="Int32" />
           <Property Name="Musteriadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Urunadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DolumYeri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SiparisTarihi" Type="DateTime" Precision="3" />
           <Property Name="TeslimTarihi" Type="DateTime" Precision="3" />
           <Property Name="Adet" Type="Int32" />
@@ -463,31 +438,6 @@
           <Property Name="Yukseklik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Güncelle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Tur" Relationship="MayaStokModel.FK_Tur_Urunler" FromRole="Urunler" ToRole="Tur" />
-        </EntityType>
-        <EntityType Name="Üretim_Dikim">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Urun_Kod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Musteri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Siparis_Tipi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Siparis_Miktari" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Urun_Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Proses_Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Genislik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Yukseklik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Kesim_Olcusu_Genislik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Kesim_Olcusu_Yukseklik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Kumas" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Biye" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Kılıf" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Kose_Etiketi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Koruk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Dolum_Sekli" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Siparis_Giris_Tarihi" Type="DateTime" Precision="3" />
-          <Property Name="Kesim_Termin_Tarihi" Type="DateTime" Precision="3" />
-          <Property Name="Acıklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Siparis_Musteri">
           <End Type="MayaStokModel.Musteri" Role="Musteri" Multiplicity="0..1" />
@@ -614,6 +564,7 @@
                 <ScalarProperty Name="Adet" ColumnName="Adet" />
                 <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
                 <ScalarProperty Name="SiparisTarihi" ColumnName="SiparisTarihi" />
+                <ScalarProperty Name="DolumYeri" ColumnName="DolumYeri" />
                 <ScalarProperty Name="Urunadi" ColumnName="Urunadi" />
                 <ScalarProperty Name="Musteriadi" ColumnName="Musteriadi" />
                 <ScalarProperty Name="UrunID" ColumnName="UrunID" />
@@ -708,32 +659,6 @@
                 <ScalarProperty Name="Urun_Turu" ColumnName="Urun_Turu" />
                 <ScalarProperty Name="Stok_Adi" ColumnName="Stok_Adi" />
                 <ScalarProperty Name="Stok_Kodu" ColumnName="Stok_Kodu" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Üretim_Dikim">
-            <EntityTypeMapping TypeName="MayaStokModel.Üretim_Dikim">
-              <MappingFragment StoreEntitySet="Üretim_Dikim">
-                <ScalarProperty Name="Acıklama" ColumnName="Acıklama" />
-                <ScalarProperty Name="Kesim_Termin_Tarihi" ColumnName="Kesim_Termin_Tarihi" />
-                <ScalarProperty Name="Siparis_Giris_Tarihi" ColumnName="Siparis_Giris_Tarihi" />
-                <ScalarProperty Name="Dolum_Sekli" ColumnName="Dolum_Sekli" />
-                <ScalarProperty Name="Koruk" ColumnName="Koruk" />
-                <ScalarProperty Name="Kose_Etiketi" ColumnName="Kose_Etiketi" />
-                <ScalarProperty Name="Kılıf" ColumnName="Kılıf" />
-                <ScalarProperty Name="Biye" ColumnName="Biye" />
-                <ScalarProperty Name="Kumas" ColumnName="Kumas" />
-                <ScalarProperty Name="Kesim_Olcusu_Yukseklik" ColumnName="Kesim_Olcusu_Yukseklik" />
-                <ScalarProperty Name="Kesim_Olcusu_Genislik" ColumnName="Kesim_Olcusu_Genislik" />
-                <ScalarProperty Name="Yukseklik" ColumnName="Yukseklik" />
-                <ScalarProperty Name="Genislik" ColumnName="Genislik" />
-                <ScalarProperty Name="Proses_Adi" ColumnName="Proses_Adi" />
-                <ScalarProperty Name="Urun_Adi" ColumnName="Urun_Adi" />
-                <ScalarProperty Name="Siparis_Miktari" ColumnName="Siparis_Miktari" />
-                <ScalarProperty Name="Siparis_Tipi" ColumnName="Siparis_Tipi" />
-                <ScalarProperty Name="Musteri" ColumnName="Musteri" />
-                <ScalarProperty Name="Urun_Kod" ColumnName="Urun_Kod" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

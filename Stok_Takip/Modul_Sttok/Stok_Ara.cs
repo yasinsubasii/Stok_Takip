@@ -92,6 +92,7 @@ namespace Stok_Takip.Modul_Sttok
             Modul_Sttok.Stok_Guncelle sg = new Modul_Sttok.Stok_Guncelle(stok);
             
             sg.ShowDialog(this);
+            //db save işlemi yapılacak
 
 
         }

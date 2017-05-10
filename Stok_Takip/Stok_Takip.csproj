@@ -96,6 +96,12 @@
     <Compile Include="Acilis_Menu\baslangic.Designer.cs">
       <DependentUpon>baslangic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Acilis_Menu\KullaniciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acilis_Menu\KullaniciEkle.Designer.cs">
+      <DependentUpon>KullaniciEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="baglanti.cs" />
     <Compile Include="Fonksiyonlar\Rutbe.cs" />
     <Compile Include="Giris.cs">
@@ -182,9 +188,6 @@
     <Compile Include="Modul_Sttok\Urunler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modul_Sttok\Üretim_Dikim.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -228,6 +231,12 @@
     <Compile Include="uretim\UretimMakina.Designer.cs">
       <DependentUpon>UretimMakina.cs</DependentUpon>
     </Compile>
+    <Compile Include="uretim\UretılenUrunler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uretim\UretılenUrunler.Designer.cs">
+      <DependentUpon>UretılenUrunler.cs</DependentUpon>
+    </Compile>
     <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -235,6 +244,9 @@
     </Compile>
     <EmbeddedResource Include="Acilis_Menu\baslangic.resx">
       <DependentUpon>baslangic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acilis_Menu\KullaniciEkle.resx">
+      <DependentUpon>KullaniciEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
@@ -280,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uretim\UretimMakina.resx">
       <DependentUpon>UretimMakina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uretim\UretılenUrunler.resx">
+      <DependentUpon>UretılenUrunler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

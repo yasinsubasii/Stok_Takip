@@ -19,10 +19,11 @@ namespace Stok_Takip
         Modul_Sttok.UretilenUrun uurn;
         Modul_Sttok.Musteri mst;
         Modul_Sttok.UretimBilgi urt;
+        string dolumyeri;
         public siparis()
         {
             InitializeComponent();
-           
+            
         }
         
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -37,6 +38,7 @@ namespace Stok_Takip
             spr.Urunadi = txt_Urun_Adi.Text;
             spr.Musteriadi = txt_Müsteri_Adi.Text;
             spr.Siparis_Kodu = "KD_" + Urunid[idu].ToString();
+            spr.DolumYeri = dolumyeri;
             spr.TeslimTarihi = Convert.ToDateTime(dateTimeTeslimat.Text);
             spr.SiparisTarihi = DateTime.Today;
             db.Siparis.Add(spr);
@@ -61,10 +63,23 @@ namespace Stok_Takip
             int id = txt_Urun_Adi.SelectedIndex;
             txt_Genislik.Text = uretim[id].EN.ToString();
             txt_Yukseklik.Text = uretim[id].BOY.ToString();
+            dolumyeri = uretim[id].DolumYeri.ToString();
 
         }
         List<Modul_Sttok.Musteri> musteri;
         List<Modul_Sttok.UretimBilgi> uretim;
+
+        private void txt_Müsteri_Adi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            int id = txt_Urun_Adi.SelectedIndex;
+            uretim.Uretim_Makine_Detay umd = new uretim.Uretim_Makine_Detay(uretim[id].id,2);
+            umd.ShowDialog(this);
+        }
 
         private void siparis_Load(object sender, EventArgs e)
         {

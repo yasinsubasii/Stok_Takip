@@ -20,6 +20,7 @@ namespace Stok_Takip.Modul_Sttok
         public Nullable<int> UrunID { get; set; }
         public string Musteriadi { get; set; }
         public string Urunadi { get; set; }
+        public string DolumYeri { get; set; }
         public Nullable<System.DateTime> SiparisTarihi { get; set; }
         public Nullable<System.DateTime> TeslimTarihi { get; set; }
         public Nullable<int> Adet { get; set; }

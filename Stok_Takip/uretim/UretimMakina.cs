@@ -14,7 +14,7 @@ namespace Stok_Takip.uretim
     public partial class UretimMakina : Form
     {
 
-        int urid,musid,uid;
+        int urid,musid,uid,sayi;
         Modul_Sttok.MayaStokEntities db = new Modul_Sttok.MayaStokEntities();
         public UretimMakina()
         {
@@ -34,33 +34,33 @@ namespace Stok_Takip.uretim
                                 
             urid = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "UrunID")); 
                       
-            Uretim_Makine_Detay umd = new Uretim_Makine_Detay(urid);
+            Uretim_Makine_Detay umd = new Uretim_Makine_Detay(urid,1);
 
             umd.ShowDialog(this);
         }
 
         private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var urtt = db.Siparis.Where(w => w.Urunadi == comboBoxEdit1.SelectedText).ToList();
+            var urtt = db.Siparis.Where(w => w.DolumYeri == comboBoxEdit1.SelectedText).ToList();
             gridControl1.DataSource = urtt;
         }
 
         private void UretimMakina_Load(object sender, EventArgs e)
         {
             int x = 0;
-            var list = db.UretimBilgi.ToList();
+            var list = db.UretimBilgi.Select(w=> w.DolumYeri).Distinct().ToList();
             while(x < list.Count)
             {
-                comboBoxEdit1.Properties.Items.Add(list[x].Urun_Kalite_Kodu);
+                comboBoxEdit1.Properties.Items.Add(list[x].ToString());
                 x++;
             }
         }
-        int sayi;
+        
         private void btn_stok_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             
             uid = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "id"));
-            musid = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MusID"));
+            musid = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MusteriID"));
             urid = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "UrunID"));
             labelControl2.Visible = true;
             textEdit1.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Adet").ToString();

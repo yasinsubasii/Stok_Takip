@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -119,6 +119,7 @@ namespace Stok_Takip.Acilis_Menu
                 ribbonPage1.Visible = false;
                 ribbonPage2.Visible = false;
                 ribbonPage3.Visible = false;
+                simpleButton2.Visible = false;
             }
 
 
@@ -171,10 +172,13 @@ namespace Stok_Takip.Acilis_Menu
 
         private void ButGonder_Click(object sender, EventArgs e)
         {
+            var personel = db.Personel.Where(w => w.id == Fonksiyonlar.Rutbe.id).FirstOrDefault();
             Modul_Sttok.Mesaj msj = new Modul_Sttok.Mesaj();
             int sayac = TxtKul.SelectedIndex;
             msj.Gonderenid = Fonksiyonlar.Rutbe.id;           
             msj.Alanid = idlist[sayac];
+            msj.Gonderenadi = personel.AdiSoyadi;
+            msj.Alanadi = TxtKul.SelectedText;
             msj.Text = TxtMesaj.Text;
             db.Mesaj.Add(msj);
             db.SaveChanges();
@@ -199,6 +203,18 @@ namespace Stok_Takip.Acilis_Menu
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
+        }
+
+        private void simpleButton2_Click_1(object sender, EventArgs e)
+        {
+            KullaniciEkle kek = new KullaniciEkle();
+            kek.Show();
+        }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            uretim.UretılenUrunler urtu = new uretim.UretılenUrunler();
+            urtu.Show();
         }
     }
 }
